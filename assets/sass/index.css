@@ -1,0 +1,70 @@
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6cece;
+  background-position: bottom;
+  background-size: cover;
+  padding: 30px 30px;
+  position: relative;
+}
+.nav-flex::before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/Copie de pngwing.com(3).png");
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: background-position 0.8s 0.2s;
+}
+.nav-flex .logo {
+  z-index: 3;
+  text-decoration: none;
+  color: #f6cece;
+  font-family: "Caveat", cursive;
+  font-size: 2.5rem;
+  padding: 6px 10px;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  gap: 15px;
+  transition: color 0.8s;
+}
+.nav-flex .logo .logo-prenom {
+  display: flex;
+  gap: 5px;
+}
+.nav-flex .logo .logo-nom {
+  display: flex;
+  gap: 5px;
+}
+.nav-flex .nav-links {
+  z-index: 3;
+  display: flex;
+  gap: 50px;
+}
+.nav-flex .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+.nav-flex .nav-links a:hover {
+  transform: scale(1.2);
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=index.css.map */
