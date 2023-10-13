@@ -1,0 +1,27 @@
+.about {
+  height: 55vh;
+  background-color: #ffffff4d;
+  border-radius: 5px;
+  margin: 70px 0px;
+
+  .a-propos_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .a-propos_img {
+    img {
+      border-radius: 10%;
+      height: 314px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .a-propos_text {
+    text-align: start;
+    line-height: 1.7;
+    width: 50%;
+  }
+}

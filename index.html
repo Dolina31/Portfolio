@@ -3,27 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Line Ibo - Portfolio</title>
+    <title>Line Ibo - Développeuse web</title>
     <link rel="stylesheet" href="assets/sass/index.css" />
+    <link rel="icon" href="./assets/images/logo_line.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Comfortaa:wght@300;500;600;700&family=Dancing+Script:wght@500&family=Great+Vibes&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Balsamiq+Sans:wght@700&family=Caveat:wght@500&family=Comfortaa:wght@300;500;600;700&family=Dancing+Script:wght@500&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
   </head>
-  <header>
-    <nav class="nav-flex">
-      <a class="logo" href="#home">Line Ibo</a>
+  <body>
+    <header id="home">
+      <nav class="navbar-flex">
+        <div class="navbar_elements">
+          <a href="#home" class="logo">Line Ibo </a>
+          <div class="navbar_menu">
+            <div class="navbar-menu_wrapper">
+              <div class="navbar-menu_wrapper_line"></div>
+              <a href="#about">À propos</a>
+            </div>
+            <div class="navbar-menu_wrapper">
+              <div class="navbar-menu_wrapper_line"></div>
+              <a href="#skills">Compétences</a>
+            </div>
+            <div class="navbar-menu_wrapper">
+              <div class="navbar-menu_wrapper_line"></div>
+              <a href="#projets">Projets</a>
+            </div>
+            <div class="navbar-menu_wrapper">
+              <div class="navbar-menu_wrapper_line"></div>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Développeuse Frontend</h1>
+      <section id="about" class="about">
+        <div class="a-propos_content">
+          <div class="a-propos_img">
+            <img
+              src="/assets/images/portrait.jpg"
+              alt="portrait de Line la créatrice du site"
+            />
+          </div>
+          <div class="a-propos_text">
+            <h2>À propos</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vero
+              illo hic consequatur eligendi tenetur sequi praesentium ab magni
+              id harum aliquid saepe ipsa cum, amet dolor laborum ratione nam.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
+              ut asperiores, temporibus tenetur id suscipit expedita? Sapiente
+              ipsa libero, dicta voluptatibus incidunt inventore eum beatae
+              vitae harum quia esse laborum?
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <div class="nav-links">
-        <a href="#a-propos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-  <body></body>
+      <section class="skills" id="skills">
+        <h2>Mes compètences</h2>
+        <div class="skills_images_flex">
+          <div class="skills_images_wrapper">
+            <img
+              src="./assets/images/software logo/html5.png"
+              alt="logo de HTML5"
+              class="skills_images"
+            />
+            <span class="skills_images_display">
+              <p class="skills_images_display_name">HTML</p>
+            </span>
+          </div>
+          <div class="skills_images_wrapper">
+            <img
+              src="./assets/images/software logo/css3.png"
+              alt="logo de CSS3"
+              class="skills_images"
+            />
+            <span class="skills_images_display">
+              <p class="skills_images_display_name">CSS</p>
+            </span>
+          </div>
+          <div class="skills_images_wrapper">
+            <img
+              src="./assets/images/software logo/sass.png"
+              alt="logo de Sass"
+              class="skills_images"
+            />
+            <span class="skills_images_display">
+              <p class="skills_images_display_name">Sass</p>
+            </span>
+          </div>
+          <div class="skills_images_wrapper">
+            <img
+              src="./assets/images/software logo/javascript.png"
+              alt="logo de Javascript"
+              class="skills_images"
+            />
+            <span class="skills_images_display">
+              <p class="skills_images_display_name">Javascript</p>
+            </span>
+          </div>
+          <div class="skills_images_wrapper">
+            <img
+              src="./assets/images/software logo/react.png"
+              alt="logo de React"
+              class="skills_images"
+            />
+            <span class="skills_images_display">
+              <p class="skills_images_display_name">React</p>
+            </span>
+          </div>
+          <div class="skills_images_wrapper">
+            <img
+              src="./assets/images/software logo/redux.png"
+              alt="logo de Redux"
+              class="skills_images"
+            />
+            <span class="skills_images_display">
+              <p class="skills_images_display_name">Redux</p>
+            </span>
+          </div>
+          <div class="skills_images_wrapper">
+            <img
+              src="./assets/images/software logo/github.png"
+              alt="logo de Github"
+              class="skills_images"
+            />
+            <span class="skills_images_display">
+              <p class="skills_images_display_name">Github</p>
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
   <script src="script/script.js"></script>
 </html>
