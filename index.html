@@ -15,41 +15,44 @@
   </head>
   <body>
     <header id="home">
-      <nav class="navbar-flex">
+      <nav class="navbar">
         <div class="navbar_elements">
-          <a href="#home" class="logo">Line Ibo </a>
+          <a href="#home" class="logo">Line Ibo</a>
           <div class="navbar_menu">
-            <div class="navbar-menu_wrapper">
-              <div class="navbar-menu_wrapper_line"></div>
+            <div class="navbar_menu_link">
+              <div class="navbar_menu_link_line"></div>
               <a href="#about">À propos</a>
             </div>
-            <div class="navbar-menu_wrapper">
-              <div class="navbar-menu_wrapper_line"></div>
+            <div class="navbar_menu_link">
+              <div class="navbar_menu_link_line"></div>
               <a href="#skills">Compétences</a>
             </div>
-            <div class="navbar-menu_wrapper">
-              <div class="navbar-menu_wrapper_line"></div>
-              <a href="#projets">Projets</a>
+            <div class="navbar_menu_link">
+              <div class="navbar_menu_link_line"></div>
+              <a href="#projects">Projets</a>
             </div>
-            <div class="navbar-menu_wrapper">
-              <div class="navbar-menu_wrapper_line"></div>
+            <div class="navbar_menu_link">
+              <div class="navbar_menu_link_line"></div>
               <a href="#contact">Contact</a>
             </div>
           </div>
         </div>
       </nav>
+      <div class="title">
+        <h1 class="title_name">Ibo Line</h1>
+        <img src="./assets/images/line.png" class="line-image" alt="" />
+        <h1 class="title_absolute">Développeuse Frontend</h1>
+      </div>
     </header>
     <main>
-      <h1>Développeuse Frontend</h1>
       <section id="about" class="about">
-        <div class="a-propos_content">
-          <div class="a-propos_img">
-            <img
-              src="/assets/images/portrait.jpg"
-              alt="portrait de Line la créatrice du site"
-            />
-          </div>
-          <div class="a-propos_text">
+        <div class="about_content">
+          <img
+            src="/assets/images/386436105_1451208419061823_3301827592734497191_n.jpg"
+            alt="portrait de Line la créatrice du site"
+          />
+
+          <div class="about_text">
             <h2>À propos</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vero
@@ -65,7 +68,7 @@
       </section>
 
       <section class="skills" id="skills">
-        <h2>Mes compètences</h2>
+        <h2>Mes compétences</h2>
         <div class="skills_images_flex">
           <div class="skills_images_wrapper">
             <img
@@ -80,7 +83,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/css3.png"
-              alt="logo de CSS3"
+              alt="logo de HTML5"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -90,7 +93,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/sass.png"
-              alt="logo de Sass"
+              alt="logo de HTML5"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -100,7 +103,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/javascript.png"
-              alt="logo de Javascript"
+              alt="logo de HTML5"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -110,7 +113,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/react.png"
-              alt="logo de React"
+              alt="logo de HTML5"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -120,7 +123,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/redux.png"
-              alt="logo de Redux"
+              alt="logo de HTML5"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -130,12 +133,95 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/github.png"
-              alt="logo de Github"
+              alt="logo de HTML5"
               class="skills_images"
             />
             <span class="skills_images_display">
               <p class="skills_images_display_name">Github</p>
             </span>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <h2>Mes projets</h2>
+        <div class="card-flex">
+          <div class="card">
+            <h3 class="card_title">Booki</h3>
+            <img
+              src="./assets/images/Project/Booki.jpg"
+              alt="image du site Booki"
+              class="card_image"
+            />
+            <div class="tags">
+              <button class="tag">HTML</button>
+              <button class="tag">CSS</button>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card_title">Ohmyfood</h3>
+            <img
+              src="./assets/images/Project/ohmyfood-banner.png"
+              alt=""
+              class="card_image"
+            />
+            <div class="tags">
+              <button class="tag">HTML</button>
+              <button class="tag">CSS</button>
+              <button class="tag">Sass</button>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card_title">Sophie Bluel</h3>
+            <img
+              src="./assets/images/Project/Sophie bluel.jpg"
+              alt=""
+              class="card_image"
+            />
+            <div class="tags">
+              <button class="tag">HTML</button>
+              <button class="tag">CSS</button>
+              <button class="tag">Javascript</button>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card_title">Kasa</h3>
+            <img
+              src="./assets/images/Project/booki.png"
+              alt=""
+              class="card_image"
+            />
+            <div class="tags">
+              <button class="tag">CSS</button>
+              <button class="tag">React</button>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card_title">Nina Carducci</h3>
+            <img
+              src="./assets/images/Project/booki.png"
+              alt=""
+              class="card_image"
+            />
+          </div>
+          <div class="card">
+            <h3 class="card_title">742 Events</h3>
+            <img
+              src="./assets/images/Project/booki.png"
+              alt=""
+              class="card_image"
+            />
+          </div>
+          <div class="card">
+            <h3 class="card_title">ArgentBank</h3>
+            <img
+              src="./assets/images/Project/booki.png"
+              alt=""
+              class="card_image"
+            />
+            <div class="tags">
+              <button class="tag">React</button>
+              <button class="tag">Redux</button>
+            </div>
           </div>
         </div>
       </section>

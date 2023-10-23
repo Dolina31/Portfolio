@@ -1,27 +1,26 @@
 .about {
-  height: 55vh;
-  background-color: #ffffff4d;
-  border-radius: 5px;
-  margin: 70px 0px;
-
-  .a-propos_content {
+  .about_content {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
+    margin: 60px 210px;
+    padding: 83px;
   }
 
-  .a-propos_img {
-    img {
-      border-radius: 10%;
-      height: 314px;
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    }
+  img {
+    border: 2px solid black;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+    width: 90%;
   }
 
-  .a-propos_text {
+  .about_text {
+    border: 1px solid black;
+    padding: 17px 52px;
     text-align: start;
     line-height: 1.7;
-    width: 50%;
+    width: 27%;
+    background-color: $transparentWhite;
+    position: absolute;
   }
 }

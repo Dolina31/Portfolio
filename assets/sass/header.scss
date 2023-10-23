@@ -1,0 +1,104 @@
+header {
+  height: 100vh;
+  background-image: url("../images/kelly-sikkema-9OGNpJPVMZ8-unsplash\(1\).jpg");
+  background-size: cover;
+}
+
+.navbar {
+  z-index: 999;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.52);
+
+  .navbar_elements {
+    width: 96%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    z-index: 3;
+    text-decoration: none;
+    color: black;
+    font-family: "Caveat", cursive;
+    font-size: 2.5rem;
+    display: flex;
+    gap: 15px;
+    letter-spacing: 0.1em;
+    transition: all 0.3s;
+    position: absolute;
+    top: 29px;
+    left: 50px;
+
+    &:hover {
+      letter-spacing: 0.15em;
+    }
+  }
+}
+
+.navbar_menu {
+  z-index: 3;
+  display: flex;
+  gap: 100px;
+
+  .navbar_menu_link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .navbar_menu_link_line {
+      width: 2px;
+      height: 30%;
+      background-color: black;
+      transform: scaleY(1);
+      transition: transform 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      transition: transform 0.3s;
+    }
+
+    &:hover .navbar_menu_link_line {
+      transform: scaleY(2);
+    }
+    &:hover a {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+
+  .title_absolute {
+    position: absolute;
+    bottom: 17%;
+    left: 27%;
+  }
+
+  .title_name {
+    position: absolute;
+    top: 38%;
+  }
+
+  .line-image {
+    height: 202px;
+    top: 37%;
+    left: 39%;
+    position: absolute;
+  }
+
+  h1 {
+    width: 49%;
+    font-weight: 400;
+  }
+}

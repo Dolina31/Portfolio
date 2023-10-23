@@ -5,35 +5,18 @@
 body {
   font-family: "Comfortaa", cursive;
   font-size: 1.2rem;
-  background-color: #eee;
-  background-image: url("../images/alexander-grey-NkQD-RHhbvY-unsplash.jpg");
-
   background-size: cover;
-}
-
-main {
-  margin-left: 50px;
-  margin-right: 50px;
+  background-position: center;
+  background-color: #eff0f2;
 }
 
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-.separation-line {
-  margin: 10px auto;
-  display: flex;
-  width: 85%;
-  height: 3px;
-  background-color: $primaryColor;
 }
 
 h1 {
-  padding-top: 13rem;
-  padding-bottom: 1rem;
   text-align: center;
   font-family: "Caveat", cursive;
   font-size: 3.5em;
@@ -42,4 +25,8 @@ h1 {
 
 h2 {
   font-size: 1.7em;
+}
+
+main {
+  background-color: #f5f3f4;
 }
