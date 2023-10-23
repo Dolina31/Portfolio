@@ -1,7 +1,15 @@
 header {
   height: 100vh;
-  background-image: url("../images/kelly-sikkema-9OGNpJPVMZ8-unsplash\(1\).jpg");
-  background-size: cover;
+
+  .parallax_img {
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 155%;
+    object-fit: cover;
+  }
 }
 
 .navbar {
@@ -90,7 +98,7 @@ header {
     top: 38%;
   }
 
-  .line-image {
+  .line_image {
     height: 202px;
     top: 37%;
     left: 39%;

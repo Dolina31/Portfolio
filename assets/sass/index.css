@@ -28,13 +28,21 @@ h2 {
 }
 
 main {
+  position: relative;
   background-color: #f5f3f4;
 }
 
 header {
   height: 100vh;
-  background-image: url("../images/kelly-sikkema-9OGNpJPVMZ8-unsplash(1).jpg");
-  background-size: cover;
+}
+header .parallax_img {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 155%;
+  object-fit: cover;
 }
 
 .navbar {
@@ -114,7 +122,7 @@ header {
   position: absolute;
   top: 38%;
 }
-.title .line-image {
+.title .line_image {
   height: 202px;
   top: 37%;
   left: 39%;
@@ -125,6 +133,11 @@ header {
   font-weight: 400;
 }
 
+.about {
+  margin-top: 50px;
+  position: relative;
+  z-index: 3;
+}
 .about .about_content {
   display: flex;
   align-items: center;
@@ -137,22 +150,40 @@ header {
   border: 2px solid black;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
   width: 90%;
+  margin-right: 250px;
 }
 .about .about_text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   border: 1px solid black;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
   padding: 17px 52px;
   text-align: start;
   line-height: 1.7;
-  width: 27%;
-  background-color: rgba(255, 255, 255, 0.52);
+  width: 37%;
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
+  right: 120px;
+}
+.about .about_text p {
+  font-weight: 700;
 }
 
 .skills {
+  z-index: 3;
   padding: 30px;
-  background-image: url("../images/jonas-allert-lHEeYX0I0JY-unsplash(1).jpg");
-  background-position: top;
-  background-size: cover;
+  position: relative;
+  height: 80vh;
+}
+.skills .parallax-skills_img {
+  z-index: -2;
+  position: absolute;
+  top: 550px;
+  left: 0px;
+  width: 120%;
+  height: 185%;
+  object-fit: cover;
 }
 .skills h2 {
   margin: 20px 0px;
@@ -210,8 +241,9 @@ header {
 }
 
 .projects {
-  margin-left: 50px;
-  margin-right: 50px;
+  background-color: white;
+  position: relative;
+  z-index: 3;
 }
 .projects h2 {
   margin: 40px 0px;
@@ -223,6 +255,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 45px;
+  width: 90%;
 }
 
 .card {

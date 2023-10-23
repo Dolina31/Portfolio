@@ -1,8 +1,18 @@
 .skills {
+  z-index: 3;
   padding: 30px;
-  background-image: url("../images/jonas-allert-lHEeYX0I0JY-unsplash\(1\).jpg");
-  background-position: top;
-  background-size: cover;
+  position: relative;
+  height: 80vh;
+
+  .parallax-skills_img {
+    z-index: -2;
+    position: absolute;
+    top: 550px;
+    left: 0px;
+    width: 120%;
+    height: 185%;
+    object-fit: cover;
+  }
 
   h2 {
     margin: 20px 0px;
