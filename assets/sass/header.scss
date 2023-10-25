@@ -99,10 +99,12 @@ header {
   }
 
   .line_image {
+    position: absolute;
+    width: 0px;
     height: 202px;
     top: 37%;
     left: 39%;
-    position: absolute;
+    transition: width 1s;
   }
 
   h1 {

@@ -12,10 +12,17 @@
       href="https://fonts.googleapis.com/css2?family=Allura&family=Balsamiq+Sans:wght@700&family=Caveat:wght@500&family=Comfortaa:wght@300;500;600;700&family=Dancing+Script:wght@500&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header id="home">
-      <div class="paralax">
+      <div class="parallax">
         <img
           src="./assets/images/header-background.jpg"
           alt=""
@@ -55,10 +62,9 @@
       <section id="about" class="about">
         <div class="about_content">
           <img
-            src="/assets/images/Line-portrait.jpg"
+            src="./assets/images/Line-portrait.jpg"
             alt="portrait de Line la créatrice du site"
           />
-
           <div class="about_text">
             <h2>À propos</h2>
             <p>
@@ -68,7 +74,7 @@
               <br /><br />
               Mon parcours m'a permis de créer des interfaces web attrayantes et
               conviviales.
-              <br /><br />Bien que le développemement web soit un domaine
+              <br /><br />Bien que le développement web soit un domaine
               totalement nouveau pour moi et qu'il me reste beaucoup à
               apprendre, je suis impatiente de relever de nouveaux défis et de
               perfectionner mes compétences.
@@ -76,11 +82,10 @@
           </div>
         </div>
       </section>
-
       <section class="skills" id="skills">
         <div class="parallax-skills">
           <img
-            src="./assets/images/Skills-background.jpg"
+            src="./assets/images/skills-background.jpg"
             alt=""
             class="parallax-skills_img"
           />
@@ -100,7 +105,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/css3.png"
-              alt="logo de HTML5"
+              alt="logo de CSS3"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -110,7 +115,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/sass.png"
-              alt="logo de HTML5"
+              alt="logo de Sass"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -120,17 +125,17 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/javascript.png"
-              alt="logo de HTML5"
+              alt="logo de JavaScript"
               class="skills_images"
             />
             <span class="skills_images_display">
-              <p class="skills_images_display_name">Javascript</p>
+              <p class="skills_images_display_name">JavaScript</p>
             </span>
           </div>
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/react.png"
-              alt="logo de HTML5"
+              alt="logo de React"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -140,7 +145,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/redux.png"
-              alt="logo de HTML5"
+              alt="logo de Redux"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -150,7 +155,7 @@
           <div class="skills_images_wrapper">
             <img
               src="./assets/images/software logo/github.png"
-              alt="logo de HTML5"
+              alt="logo de Github"
               class="skills_images"
             />
             <span class="skills_images_display">
@@ -161,88 +166,280 @@
       </section>
       <section class="projects" id="projects">
         <h2>Mes projets</h2>
+
         <div class="card-flex">
+          <!-- Booki's card -->
           <div class="card">
-            <h3 class="card_title">Booki</h3>
-            <img
-              src="./assets/images/Project/Booki.jpg"
-              alt="image du site Booki"
-              class="card_image"
-            />
-            <div class="tags">
-              <button class="tag">HTML</button>
-              <button class="tag">CSS</button>
+            <div class="card_frontside">
+              <h3 class="card_title">Booki</h3>
+              <i class="fa-solid fa-caret-right card_flip_frontside_button"></i>
+              <span class="card_lines card_line_top"></span>
+              <div class="card_img">
+                <img
+                  src="./assets/images/Project/booki-banner.png"
+                  alt="Un lit avec des draps blancs et des oreillers jaunes dans une chambre d'hôtel"
+                />
+              </div>
+              <span class="card_lines card_line_bottom"></span>
+            </div>
+            <div class="card_backside">
+              <i class="fa-solid fa-caret-left card_flip_backside_button"></i>
+              <div class="card_backside_content">
+                <div class="card_backside_icons">
+                  <img
+                    src="./assets/images/software logo/html5.svg"
+                    alt="Logo de HTML5"
+                    class="card_backside_icon"
+                  /><img
+                    src="./assets/images/software logo/css3.svg"
+                    alt="Logo de CSS3"
+                    class="card_backside_icon"
+                  />
+                </div>
+                <span class="card_backside_line"></span>
+                <p>
+                  Ma mission sur ce projet consistait à concrétiser les concepts
+                  élaborés par l'UI designer en les intégrant avec HTML et
+                  CSS.<br />
+                  <br />L'objectif principal était de créer un site web réactif
+                  qui puisse s'adapter à toute les tailles d'écrans.
+                </p>
+                <div class="card_backside_button">
+                  <a
+                    href="https://github.com/Dolina31/P3-openclassroom"
+                    target="_blank"
+                    ><button>Voir le code</button></a
+                  >
+                  <a
+                    href="https://dolina31.github.io/P3-openclassroom/"
+                    target="_blank"
+                    ><button>Voir le site</button></a
+                  >
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Ohmyfood card -->
           <div class="card">
-            <h3 class="card_title">Ohmyfood</h3>
-            <img
-              src="./assets/images/Project/ohmyfood-banner.png"
-              alt=""
-              class="card_image"
-            />
-            <div class="tags">
-              <button class="tag">HTML</button>
-              <button class="tag">CSS</button>
-              <button class="tag">Sass</button>
+            <div class="card_frontside">
+              <h3 class="card_title">Ohmyfood</h3>
+              <i class="fa-solid fa-caret-right card_flip_frontside_button"></i>
+              <span class="card_lines card_line_top"></span>
+              <div class="card_img">
+                <img
+                  src="./assets/images/Project/ohmyfood-banner.jpg"
+                  alt="Un plat de nourriture sur une table de restaurant"
+                />
+              </div>
+              <span class="card_lines card_line_bottom"></span>
+            </div>
+            <div class="card_backside">
+              <i class="fa-solid fa-caret-left card_flip_backside_button"></i>
+              <div class="card_backside_content">
+                <div class="card_backside_icons">
+                  <img
+                    src="./assets/images/software logo/html5.svg"
+                    alt="Logo de HTML5"
+                    class="card_backside_icon"
+                  /><img
+                    src="./assets/images/software logo/css3.svg"
+                    alt="Logo de CSS3"
+                    class="card_backside_icon"
+                  />
+                  <img
+                    src="./assets/images/software logo/sass.svg"
+                    alt="Logo de Sass"
+                    class="card_backside_icon"
+                  />
+                </div>
+                <span class="card_backside_line"></span>
+                <p>
+                  Ce projet a été pensé en privilégiant une approche "mobile
+                  first" pour garantir une expérience utilisateur optimale sur
+                  tous les appareils. <br />
+                  <br />Des animations ainsi qu'un loading ont été intégrées
+                  pour rendre le site plus interactif. Le code à été organisé et
+                  optimisé grâce à Sass.
+                </p>
+                <div class="card_backside_button">
+                  <a
+                    href="https://github.com/Dolina31/P4-openclassroom"
+                    target="_blank"
+                    ><button>Voir le code</button></a
+                  >
+                  <a
+                    href="https://dolina31.github.io/P4-Openclassroom/"
+                    target="_blank"
+                    ><button>Voir le site</button></a
+                  >
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Sophie Bluel card -->
           <div class="card">
-            <h3 class="card_title">Sophie Bluel</h3>
-            <img
-              src="./assets/images/Project/Sophie bluel.jpg"
-              alt=""
-              class="card_image"
-            />
-            <div class="tags">
-              <button class="tag">HTML</button>
-              <button class="tag">CSS</button>
-              <button class="tag">Javascript</button>
+            <div class="card_frontside">
+              <h3 class="card_title">Sophie Bluel</h3>
+              <i class="fa-solid fa-caret-right card_flip_frontside_button"></i>
+              <span class="card_lines card_line_top"></span>
+              <div class="card_img">
+                <img
+                  src="./assets/images/Project/sophie-bluel-banner.png"
+                  alt="Portait d'une femme entourée de verdure"
+                />
+              </div>
+              <span class="card_lines card_line_bottom"></span>
+            </div>
+            <div class="card_backside">
+              <i class="fa-solid fa-caret-left card_flip_backside_button"></i>
+              <div class="card_backside_content">
+                <div class="card_backside_icons">
+                  <img
+                    src="./assets/images/software logo/html5.svg"
+                    alt="Logo de HTML5"
+                    class="card_backside_icon"
+                  /><img
+                    src="./assets/images/software logo/css3.svg"
+                    alt="Logo de CSS3"
+                    class="card_backside_icon"
+                  />
+                  <img
+                    src="./assets/images/software logo/javascript.svg"
+                    alt="Logo de Javascript"
+                    class="card_backside_icon"
+                  />
+                </div>
+                <span class="card_backside_line"></span>
+                <p>
+                  J'ai été chargé de concevoir le portfolio de l'architecte
+                  Sophie Bluel. J'ai créé une page de présentation des travaux,
+                  avec des options de filtrage par catégorie, ainsi qu'une page
+                  de connexion pour l'administrateur <br />
+                  <br />
+                  J'ai utilisé JavaScript pour générer dynamiquement les
+                  éléments en communiquant avec une API, permettant ainsi
+                  d'ajouter ou de supprimer des projets.
+                </p>
+                <div class="card_backside_button">
+                  <a
+                    href="https://github.com/Dolina31/P6-openclassroom"
+                    target="_blank"
+                    ><button>Voir le code</button></a
+                  >
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Kasa's card -->
           <div class="card">
-            <h3 class="card_title">Kasa</h3>
-            <img
-              src="./assets/images/Project/booki.png"
-              alt=""
-              class="card_image"
-            />
-            <div class="tags">
-              <button class="tag">CSS</button>
-              <button class="tag">React</button>
+            <div class="card_frontside">
+              <h3 class="card_title">Kasa</h3>
+              <i class="fa-solid fa-caret-right card_flip_frontside_button"></i>
+              <span class="card_lines card_line_top"></span>
+              <div class="card_img">
+                <img
+                  src="./assets/images/Project/kasa-banner.jpg"
+                  alt="Salon moderne et confortable"
+                />
+              </div>
+              <span class="card_lines card_line_bottom"></span>
+            </div>
+            <div class="card_backside">
+              <i class="fa-solid fa-caret-left card_flip_backside_button"></i>
+              <div class="card_backside_content">
+                <div class="card_backside_icons">
+                  <img
+                    src="./assets/images/software logo/react.svg"
+                    alt="Logo de React"
+                    class="card_backside_icon"
+                  />
+                  <img
+                    src="./assets/images/software logo/sass.svg"
+                    alt="Logo de Sass"
+                    class="card_backside_icon"
+                  />
+                </div>
+                <span class="card_backside_line"></span>
+                <p>
+                  J'ai travaillé sur la refonte d'un site de location
+                  d'appartements en utilisant React. <br />
+                  <br />
+                  J'ai créé les composants et les routes nécessaires, et j'ai
+                  également intégrée de manière dynamique les hôtes, les
+                  descriptions et les évaluations de chaque logement.
+                </p>
+                <div class="card_backside_button">
+                  <a
+                    href="https://github.com/Dolina31/P8-Openclassroom"
+                    target="_blank"
+                    ><button>Voir le code</button></a
+                  >
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- ArgentBank's card -->
           <div class="card">
-            <h3 class="card_title">Nina Carducci</h3>
-            <img
-              src="./assets/images/Project/booki.png"
-              alt=""
-              class="card_image"
-            />
-          </div>
-          <div class="card">
-            <h3 class="card_title">742 Events</h3>
-            <img
-              src="./assets/images/Project/booki.png"
-              alt=""
-              class="card_image"
-            />
-          </div>
-          <div class="card">
-            <h3 class="card_title">ArgentBank</h3>
-            <img
-              src="./assets/images/Project/booki.png"
-              alt=""
-              class="card_image"
-            />
-            <div class="tags">
-              <button class="tag">React</button>
-              <button class="tag">Redux</button>
+            <div class="card_frontside">
+              <h3 class="card_title">ArgentBank</h3>
+              <i class="fa-solid fa-caret-right card_flip_frontside_button"></i>
+              <span class="card_lines card_line_top"></span>
+              <div class="card_img">
+                <img
+                  src="./assets/images/Project/argentbank-banner.jpeg
+                  "
+                  alt="Jeune plante poussant dans un verre rempli de pièces de monnaies"
+                />
+              </div>
+              <span class="card_lines card_line_bottom"></span>
+            </div>
+            <div class="card_backside">
+              <i class="fa-solid fa-caret-left card_flip_backside_button"></i>
+              <div class="card_backside_content">
+                <div class="card_backside_icons">
+                  <img
+                    src="./assets/images/software logo/react.svg"
+                    alt="Logo de React"
+                    class="card_backside_icon"
+                  />
+                  <img
+                    src="./assets/images/software logo/redux.svg"
+                    alt="Logo de Redux"
+                    class="card_backside_icon"
+                  />
+                  <img
+                    src="./assets/images/software logo/swagger.svg"
+                    alt="Logo de Swagger"
+                    class="card_backside_icon"
+                  />
+                </div>
+                <span class="card_backside_line"></span>
+                <p>
+                  Il m'a été demandé, pour ce projet, d'intégrer le site avec
+                  React et de mettre en place la connexion utilisateur. <br />
+                  <br />
+                  J'ai donc mis en place la gestion des connexions des
+                  utilisateurs, l'affichage de leurs comptes ainsi que la
+                  possibilité de modifier leur pseudo. J'ai également créé de
+                  nouvelles routes API pour la future gestion des transactions.
+                </p>
+                <div class="card_backside_button">
+                  <a
+                    href="https://github.com/Dolina31/P11-Openclassroom"
+                    target="_blank"
+                    ><button>Voir le code</button></a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="script/script.js"></script>
   </body>
-  <script src="script/script.js"></script>
 </html>
