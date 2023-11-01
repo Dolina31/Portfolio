@@ -3,7 +3,7 @@ const parallaxImage = document.querySelector(".parallax_img");
 const parallaxSkillsImage = document.querySelector(".parallax-skills_img");
 const title = document.querySelector(".title");
 const titleContent = title.querySelectorAll("*");
-const lineImage = title.querySelector(".line_image");
+const returnHomeIcon = document.querySelector(".return-home-icon");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
@@ -14,10 +14,12 @@ window.addEventListener("scroll", () => {
   titleContent.forEach((element) => {
     element.style.transform = `translateY(${scrollY * 0.5}px)`;
   });
-});
 
-window.addEventListener("load", () => {
-  lineImage.style.width = "450px";
+  if (scrollY > 5) {
+    returnHomeIcon.style.visibility = "visible";
+  } else {
+    returnHomeIcon.style.visibility = "hidden";
+  }
 });
 
 cards.forEach((card) => {

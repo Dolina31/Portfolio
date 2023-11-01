@@ -13,7 +13,6 @@ header {
 }
 
 .navbar {
-  z-index: 999;
   padding-top: 30px;
   padding-bottom: 30px;
   transition: all 0.3s;
@@ -23,22 +22,20 @@ header {
     width: 96%;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .logo {
-    z-index: 3;
     text-decoration: none;
     color: black;
     font-family: "Caveat", cursive;
     font-size: 2.5rem;
     display: flex;
     gap: 15px;
+    margin-left: 30px;
+    margin-bottom: 5px;
     letter-spacing: 0.1em;
     transition: all 0.3s;
-    position: absolute;
-    top: 29px;
-    left: 50px;
 
     &:hover {
       letter-spacing: 0.15em;
@@ -85,30 +82,25 @@ header {
   gap: 50px;
   align-items: center;
   justify-content: center;
-  height: 85%;
-
-  .title_absolute {
-    position: absolute;
-    bottom: 17%;
-    left: 27%;
-  }
-
-  .title_name {
-    position: absolute;
-    top: 38%;
-  }
-
-  .line_image {
-    position: absolute;
-    width: 0px;
-    height: 202px;
-    top: 37%;
-    left: 39%;
-    transition: width 1s;
-  }
+  height: 95%;
 
   h1 {
     width: 49%;
     font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 1083px) {
+  .navbar {
+    .navbar_elements {
+      .navbar_menu {
+        gap: 25px;
+      }
+    }
+  }
+  .title {
+    h1 {
+      width: 90%;
+    }
   }
 }

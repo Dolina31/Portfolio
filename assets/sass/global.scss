@@ -10,21 +10,23 @@ body {
   background-color: #eff0f2;
 
   .return-home-icon {
+    visibility: hidden;
     z-index: 999;
     cursor: pointer;
     position: fixed;
-    bottom: 40px;
-    right: 40px;
-    padding: 10px;
-    font-size: 1.7em;
+    bottom: 15px;
+    right: 25px;
+    padding: 5px;
+    font-size: 1.5em;
     border-radius: 50%;
-    background-color: white;
-    box-shadow: 2px -1px 5px rgb(189, 188, 188);
-    transition: box-shadow 1s;
+    background-color: #ffffffb5;
+    box-shadow: 2px -1px 5px rgb(122, 121, 121);
+    transition: box-shadow 0.6s;
     color: black;
 
     &:hover {
-      box-shadow: 0px 0px 8px rgb(189, 188, 188);
+      box-shadow: -2px 1px 8px rgb(122, 121, 121);
+      color: #a78476;
     }
   }
 }
