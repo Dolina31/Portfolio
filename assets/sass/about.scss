@@ -1,38 +1,24 @@
 .about {
+  background: white;
   margin-top: 50px;
   position: relative;
-  z-index: 3;
+  z-index: 4;
+  height: 108vh;
 
   .about_content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    margin: 60px 210px 0px 210px;
-    padding: 83px;
+    height: 100%;
   }
 
   img {
     border: 2px solid black;
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
     width: 90%;
-    margin-right: 250px;
   }
 
   .about_text {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border: 1px solid black;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
-    padding: 17px 52px;
-    text-align: start;
-    line-height: 1.7;
-    width: 37%;
-    background-color: rgba(255, 255, 255, 90%);
-    position: absolute;
-    right: 120px;
-
     p {
       font-weight: 700;
     }
