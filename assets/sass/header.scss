@@ -7,7 +7,7 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 155%;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -16,6 +16,10 @@ header {
   padding: 30px 0px;
   transition: all 0.3s;
   background-color: rgba(255, 255, 255, 0.52);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 
   .navbar_elements {
     width: 96%;
@@ -86,17 +90,22 @@ header {
   }
 }
 
-.title {
+.title_position {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   align-items: center;
   justify-content: center;
-  height: 95%;
+  height: 100%;
 
-  h1 {
-    width: 49%;
-    font-weight: 400;
+  .title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+    background-color: $transparentWhite;
+    h1 {
+      font-weight: 400;
+    }
   }
 }
 
@@ -125,6 +134,7 @@ header {
 
   .navbar {
     padding: 20px 0px;
+
     .navbar_elements {
       align-items: center;
 
@@ -134,12 +144,12 @@ header {
       }
 
       .navbar_menu {
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 90px;
-
         align-items: center;
-        background: #ffffff85;
+        background: rgba(255, 255, 255, 0.9);
         padding: 15px 0px;
         width: 100%;
         gap: 15px;
@@ -168,18 +178,12 @@ header {
       font-size: 1.7em;
     }
   }
-  .title {
-    height: 65%;
-    h1 {
-      font-size: 2.2em;
-    }
-  }
-}
 
-@media screen and (max-width: 518px) {
-  .title {
-    h1 {
-      width: 100%;
+  .title_position {
+    .title {
+      h1 {
+        font-size: 1.8em;
+      }
     }
   }
 }

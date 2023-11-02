@@ -1,9 +1,11 @@
 const cards = document.querySelectorAll(".card");
 const parallaxImage = document.querySelector(".parallax_img");
 const parallaxSkillsImage = document.querySelector(".parallax-skills_img");
-const title = document.querySelector(".title");
-const titleContent = title.querySelectorAll("*");
+const titlePosition = document.querySelector(".title_position");
 const returnHomeIcon = document.querySelector(".return-home-icon");
+const navBar = document.querySelector(".navbar");
+const NavBarIcon = document.querySelector(".navbar-icon");
+const navbarMenu = document.querySelector(".navbar_menu");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
@@ -11,14 +13,16 @@ window.addEventListener("scroll", () => {
   parallaxImage.style.transform = `translateY(${scrollY * 0.4}px)`;
   parallaxSkillsImage.style.transform = `translateY(-${scrollY * 0.4}px)`;
 
-  titleContent.forEach((element) => {
-    element.style.transform = `translateY(${scrollY * 0.5}px)`;
-  });
+  titlePosition.style.transform = `translateY(-${scrollY * 0.4}px)`;
 
-  if (scrollY > 5) {
+  if (scrollY > 10) {
     returnHomeIcon.style.visibility = "visible";
+    navBar.style.backgroundColor = "rgba(255, 255, 255, 0.96)";
+    navBar.style.padding = "20px 0px";
   } else {
     returnHomeIcon.style.visibility = "hidden";
+    navBar.style.backgroundColor = "rgba(255, 255, 255, 0.7098039216)";
+    navBar.style.padding = "30px 0px";
   }
 });
 
@@ -48,16 +52,13 @@ cards.forEach((card) => {
   });
 });
 
-const NavBarIcon = document.querySelector(".navbar-icon");
-const navbarMenu = document.querySelector(".navbar_menu");
-
 let isNavbarVisible = false;
 
 NavBarIcon.addEventListener("click", () => {
   if (isNavbarVisible) {
-    navbarMenu.style.display = "flex";
-  } else {
     navbarMenu.style.display = "none";
+  } else {
+    navbarMenu.style.display = "flex";
   }
 
   isNavbarVisible = !isNavbarVisible;
