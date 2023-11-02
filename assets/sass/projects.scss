@@ -177,3 +177,14 @@
     width: 90%;
   }
 }
+
+@media screen and (max-width: 530px) {
+  .card {
+    width: 90%;
+
+    .card_flip_frontside_button,
+    .card_flip_backside_button {
+      display: none;
+    }
+  }
+}

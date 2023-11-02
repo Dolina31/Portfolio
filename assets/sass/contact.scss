@@ -55,3 +55,29 @@
     }
   }
 }
+
+@media screen and (max-width: 510px) {
+  .contact_content {
+    gap: 10px;
+
+    .contact_link {
+      i {
+        font-size: 1.3em;
+      }
+
+      p {
+        font-size: 0.8em;
+      }
+
+      .contact_line {
+        height: 70%;
+      }
+
+      &:hover {
+        .contact_line {
+          transform: scaleY(1.4);
+        }
+      }
+    }
+  }
+}

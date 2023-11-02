@@ -17,12 +17,8 @@ window.addEventListener("scroll", () => {
 
   if (scrollY > 10) {
     returnHomeIcon.style.visibility = "visible";
-    navBar.style.backgroundColor = "rgba(255, 255, 255, 0.96)";
-    navBar.style.padding = "20px 0px";
   } else {
     returnHomeIcon.style.visibility = "hidden";
-    navBar.style.backgroundColor = "rgba(255, 255, 255, 0.7098039216)";
-    navBar.style.padding = "30px 0px";
   }
 });
 
@@ -38,7 +34,6 @@ cards.forEach((card) => {
   cardFlipFrontsideButton.forEach((button) => {
     button.addEventListener("click", () => {
       cardBackSide.style.visibility = "visible";
-      cardBackSide.style.transform = "rotateY(180deg)";
       card.style.transform = "rotateY(180deg)";
     });
   });
@@ -46,7 +41,6 @@ cards.forEach((card) => {
   cardFlipBacksideButton.forEach((button) => {
     button.addEventListener("click", () => {
       cardBackSide.style.visibility = "hidden";
-      cardBackSide.style.transform = "rotateY(0deg)";
       card.style.transform = "rotateY(0deg)";
     });
   });
