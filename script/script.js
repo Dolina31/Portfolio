@@ -47,3 +47,33 @@ cards.forEach((card) => {
     });
   });
 });
+
+const NavBarIcon = document.querySelector(".navbar-icon");
+const navbarMenu = document.querySelector(".navbar_menu");
+
+let isNavbarVisible = false;
+
+NavBarIcon.addEventListener("click", () => {
+  if (isNavbarVisible) {
+    navbarMenu.style.transform = "translateX(100%)";
+  } else {
+    navbarMenu.style.transform = "translateX(0%)";
+  }
+
+  isNavbarVisible = !isNavbarVisible;
+});
+
+returnHomeIcon.addEventListener("click", () => {
+  // Durée de l'animation (en millisecondes)
+  const duration = 1000; // Par exemple, 1 seconde
+
+  const scrollStep = -window.scrollY / (duration / 15);
+
+  const scrollInterval = setInterval(() => {
+    if (window.scrollY !== 0) {
+      window.scrollBy(0, scrollStep);
+    } else {
+      clearInterval(scrollInterval);
+    }
+  }, 15);
+});

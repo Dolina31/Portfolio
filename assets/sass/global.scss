@@ -52,3 +52,9 @@ main {
   position: relative;
   background-color: #f5f3f4;
 }
+
+@media screen and (max-width: 492px) {
+  h2 {
+    font-size: 1.9em;
+  }
+}
