@@ -1,7 +1,7 @@
 const cards = document.querySelectorAll(".card");
 const parallaxImage = document.querySelector(".parallax_img");
 const parallaxSkillsImage = document.querySelector(".parallax-skills_img");
-const titlePosition = document.querySelector(".title_position");
+const title = document.querySelector(".title");
 const returnHomeIcon = document.querySelector(".return-home-icon");
 const navBar = document.querySelector(".navbar");
 const NavBarIcon = document.querySelector(".navbar-icon");
@@ -12,8 +12,7 @@ window.addEventListener("scroll", () => {
 
   parallaxImage.style.transform = `translateY(${scrollY * 0.4}px)`;
   parallaxSkillsImage.style.transform = `translateY(-${scrollY * 0.4}px)`;
-
-  titlePosition.style.transform = `translateY(-${scrollY * 0.4}px)`;
+  title.style.transform = `translateY(${scrollY * 0.9}px)`;
 
   if (scrollY > 10) {
     returnHomeIcon.style.visibility = "visible";
@@ -40,8 +39,8 @@ cards.forEach((card) => {
 
   cardFlipBacksideButton.forEach((button) => {
     button.addEventListener("click", () => {
-      cardBackSide.style.visibility = "hidden";
       card.style.transform = "rotateY(0deg)";
+      card.style.backfaceVisibility = "visible";
     });
   });
 });

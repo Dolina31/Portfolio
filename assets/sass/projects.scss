@@ -30,7 +30,7 @@
   background-color: #dedfcd;
   border-radius: 7px;
   width: 42%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
   transform-style: preserve-3d;
   transition: all 0.5s;
@@ -54,7 +54,7 @@
 
     .card_flip_frontside_button {
       position: absolute;
-      top: 25px;
+      top: 22px;
       right: 50px;
       font-size: 1.7em;
       cursor: pointer;
@@ -76,10 +76,12 @@
     top: 0px;
     left: 0px;
     transform: rotateY(180deg);
+    background-color: #dedfcd;
+    border-radius: 7px;
 
     .card_flip_backside_button {
       position: absolute;
-      top: 25px;
+      top: 22px;
       left: 50px;
       font-size: 1.7em;
       cursor: pointer;
@@ -87,7 +89,7 @@
   }
 
   &:hover {
-    box-shadow: 15px 15px 4px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.4);
     transform: scale(1.03);
 
     .card_line_top {
@@ -179,12 +181,57 @@
 }
 
 @media screen and (max-width: 530px) {
-  .card {
-    width: 90%;
+  .projects {
+    h2 {
+      margin: 40px 0px;
+    }
 
-    .card_flip_frontside_button,
-    .card_flip_backside_button {
-      display: none;
+    .card_flex {
+      width: 92%;
+    }
+  }
+  .card {
+    height: 370px;
+
+    .card_frontside {
+      h3 {
+        font-size: 1.4em;
+      }
+      .card_flip_frontside_button {
+        top: 18px;
+        right: 20px;
+      }
+    }
+
+    .card_backside {
+      .card_flip_backside_button {
+        left: 20px;
+      }
+    }
+
+    .card_backside_content {
+      flex-direction: column;
+      justify-content: unset;
+      margin-top: 45px;
+      gap: 15px;
+
+      .card_backside_icons {
+        flex-direction: row;
+
+        .card_backside_icon {
+          height: 35px;
+        }
+      }
+
+      .card_backside_line {
+        height: 0px;
+        width: 60%;
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 0.8em;
     }
   }
 }
