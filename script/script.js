@@ -21,7 +21,7 @@ window.addEventListener("scroll", () => {
     returnHomeIcon.style.visibility = "hidden";
   }
 
-  if (scrollY > 350) {
+  if (scrollY > 250) {
     aboutImage.style.transform = "translateX(0)";
     aboutImage.style.opacity = "1";
     aboutText.style.transform = "translateX(0)";
