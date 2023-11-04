@@ -19,14 +19,13 @@ body .return-home-icon {
   padding: 5px;
   font-size: 1.5em;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.7098039216);
-  box-shadow: 2px -1px 5px rgb(122, 121, 121);
+  background-color: rgba(255, 255, 255, 0.631372549);
+  box-shadow: 2px -1px 4px rgb(122, 121, 121);
   transition: box-shadow 0.6s;
   color: black;
 }
 body .return-home-icon:hover {
-  box-shadow: -2px 1px 8px rgb(122, 121, 121);
-  color: #a78476;
+  box-shadow: -2px 1px 4px rgb(122, 121, 121);
 }
 
 section {
@@ -222,26 +221,27 @@ header .parallax_img {
 }
 .about .about_content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
   height: 80%;
   width: 85%;
 }
 .about img {
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
-  height: 50%;
-  width: 100%;
+  height: 75%;
+  width: 45%;
   object-fit: cover;
-  transform: translateX(7em);
-  opacity: 0;
-  transition: all 1s;
-}
-.about .about_text {
   transform: translateX(-7em);
   opacity: 0;
-  transition: all 1s 0.5s;
+  transition: all 1s ease-in-out;
+  border: 2px solid black;
+}
+.about .about_text {
+  width: 50%;
+  transform: translateX(7em);
+  opacity: 0;
+  transition: all 1s 0.5s ease-in-out;
 }
 .about .about_text h2 {
   margin-bottom: 30px;
@@ -250,16 +250,28 @@ header .parallax_img {
   max-height: 500px;
   font-weight: 700;
   line-height: 1.8em;
-  text-overflow: ellipsis;
-  overflow: auto;
   font-size: 0.9em;
 }
 
+@media screen and (max-width: 1023px) {
+  .about .about_content {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .about img {
+    height: 50%;
+    width: 100%;
+  }
+  .about .about_text {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 880px) {
   .about img {
     width: 100%;
   }
   .about .about_text {
+    text-align: unset;
     font-size: 0.8em;
   }
 }
