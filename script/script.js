@@ -1,23 +1,31 @@
 const cards = document.querySelectorAll(".card");
 const parallaxImage = document.querySelector(".parallax_img");
 const parallaxSkillsImage = document.querySelector(".parallax-skills_img");
-const title = document.querySelector(".title");
 const returnHomeIcon = document.querySelector(".return-home-icon");
 const navBar = document.querySelector(".navbar");
 const NavBarIcon = document.querySelector(".navbar-icon");
 const navbarMenu = document.querySelector(".navbar_menu");
+const aboutImage = document.querySelector(".about_image");
+const aboutText = document.querySelector(".about_text");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
+  console.log(scrollY);
 
   parallaxImage.style.transform = `translateY(${scrollY * 0.4}px)`;
   parallaxSkillsImage.style.transform = `translateY(-${scrollY * 0.4}px)`;
-  title.style.transform = `translateY(${scrollY * 0.9}px)`;
 
   if (scrollY > 10) {
     returnHomeIcon.style.visibility = "visible";
   } else {
     returnHomeIcon.style.visibility = "hidden";
+  }
+
+  if (scrollY > 450) {
+    aboutImage.style.transform = "translateX(0)";
+    aboutImage.style.opacity = "1";
+    aboutText.style.transform = "translateX(0)";
+    aboutText.style.opacity = "1";
   }
 });
 
