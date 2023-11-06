@@ -4,9 +4,29 @@ const parallaxSkillsImage = document.querySelector(".parallax-skills_img");
 const returnHomeIcon = document.querySelector(".return-home-icon");
 const navBar = document.querySelector(".navbar");
 const NavBarIcon = document.querySelector(".navbar-icon");
-const navbarMenu = document.querySelector(".navbar_menu");
+const navBarMenu = document.querySelector(".navbar_menu");
+const navBarMenuLink = document.querySelectorAll(".navbar_menu_link");
+const title = document.querySelector(".title");
 const aboutImage = document.querySelector(".about_image");
 const aboutText = document.querySelector(".about_text");
+const skillsImageWrapper = document.querySelectorAll(".skills_images_wrapper");
+const skillContent = document.querySelector(".skills_content");
+const h2Elements = document.querySelectorAll("h2");
+
+window.addEventListener("load", () => {
+  navBar.style.opacity = "1";
+  navBar.style.padding = "30px 0px";
+
+  navBarMenuLink.forEach((link, index) => {
+    setTimeout(() => {
+      link.style.opacity = "1";
+      link.style.transform = "translateY(0)";
+    }, index * 100 + 100);
+  });
+
+  title.style.width = "100%";
+  title.style.opacity = "1";
+});
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
@@ -26,6 +46,16 @@ window.addEventListener("scroll", () => {
     aboutImage.style.opacity = "1";
     aboutText.style.transform = "translateX(0)";
     aboutText.style.opacity = "1";
+  }
+
+  if (scrollY > 1300 && scrollY < 1750) {
+    skillsImageWrapper.forEach((wrapper, index) => {
+      setTimeout(() => {
+        wrapper.style.transform = "translateY(0)";
+        wrapper.style.opacity = "1";
+      }, index * 150 + 150);
+    });
+    skillContent.style.width = "93%";
   }
 });
 
@@ -57,9 +87,9 @@ let isNavbarVisible = false;
 
 NavBarIcon.addEventListener("click", () => {
   if (isNavbarVisible) {
-    navbarMenu.style.display = "none";
+    navBarMenu.style.display = "none";
   } else {
-    navbarMenu.style.display = "flex";
+    navBarMenu.style.display = "flex";
   }
 
   isNavbarVisible = !isNavbarVisible;

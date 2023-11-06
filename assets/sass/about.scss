@@ -1,11 +1,11 @@
 .about {
-  background: white;
+  background-color: white;
+
   margin-top: 50px;
   position: relative;
   z-index: 4;
   height: 108vh;
   justify-content: center;
-  background-color: #dedfcd;
 
   .about_content {
     display: flex;
@@ -23,7 +23,7 @@
     object-fit: cover;
     transform: translateX(-7em);
     opacity: 0;
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out;
     border: 2px solid black;
   }
 
@@ -31,7 +31,7 @@
     width: 50%;
     transform: translateX(7em);
     opacity: 0;
-    transition: all 1s 0.5s ease-in-out;
+    transition: all 0.7s 0.3s ease-in-out;
 
     h2 {
       margin-bottom: 30px;

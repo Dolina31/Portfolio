@@ -66,17 +66,19 @@ header .parallax_img {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: 102%;
   object-fit: cover;
 }
 
 .navbar {
-  padding: 30px 0px;
+  padding: 0px 0px;
   transition: all 0.3s;
   background-color: rgba(255, 255, 255, 0.52);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
   position: absolute;
   width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
 }
 .navbar .navbar_elements {
   width: 96%;
@@ -117,6 +119,9 @@ header .parallax_img {
   display: flex;
   align-items: center;
   gap: 20px;
+  opacity: 0;
+  transform: translateY(-2em);
+  transition: all 0.4s 0.3s;
 }
 .navbar_menu .navbar_menu_link .navbar_menu_link_line {
   width: 2px;
@@ -147,9 +152,11 @@ header .parallax_img {
 .title_position .title {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 60%;
   padding: 40px 0px;
   background-color: rgba(255, 255, 255, 0.52);
+  opacity: 0;
+  transition: all 0.5s 0.8s;
 }
 .title_position .title h1 {
   font-weight: 400;
@@ -211,13 +218,12 @@ header .parallax_img {
   }
 }
 .about {
-  background: white;
+  background-color: white;
   margin-top: 50px;
   position: relative;
   z-index: 4;
   height: 108vh;
   justify-content: center;
-  background-color: #dedfcd;
 }
 .about .about_content {
   display: flex;
@@ -234,14 +240,14 @@ header .parallax_img {
   object-fit: cover;
   transform: translateX(-7em);
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
   border: 2px solid black;
 }
 .about .about_text {
   width: 50%;
   transform: translateX(7em);
   opacity: 0;
-  transition: all 1s 0.5s ease-in-out;
+  transition: all 0.7s 0.3s ease-in-out;
 }
 .about .about_text h2 {
   margin-bottom: 30px;
@@ -288,11 +294,11 @@ header .parallax_img {
   top: 350px;
   left: 0px;
   width: 100%;
-  height: 195%;
+  height: 200%;
   object-fit: cover;
 }
 .skills .skills_content {
-  width: 93%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,6 +306,7 @@ header .parallax_img {
   padding: 15px;
   background: rgba(255, 255, 255, 0.52);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.7s 0.2s;
 }
 .skills h2 {
   margin: 20px 0px;
@@ -314,6 +321,9 @@ header .parallax_img {
 }
 .skills_images_flex .skills_images_wrapper {
   position: relative;
+  transform: translateY(-3em);
+  opacity: 0;
+  transition: all 0.3s 0.5s ease-in-out;
 }
 .skills_images_flex .skills_images_wrapper .skills_images {
   height: 100px;
