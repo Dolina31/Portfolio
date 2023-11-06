@@ -19,7 +19,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 55px;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -27,13 +27,14 @@
   position: relative;
   height: 455px;
   padding: 15px;
-  background-color: #dedfcd;
-  border-radius: 7px;
+  background-color: rgb(185 189 179 / 46%);
   width: 42%;
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
   transform-style: preserve-3d;
-  transition: all 0.5s;
+  opacity: 0;
+  transform: translateY(3em);
+  transition: all 0.5s ease-in-out;
 
   .card_frontside {
     display: flex;
@@ -76,7 +77,7 @@
     top: 0px;
     left: 0px;
     transform: rotateY(180deg);
-    background-color: #dedfcd;
+    background-color: rgb(185 189 179 / 46%);
     border-radius: 7px;
 
     .card_flip_backside_button {
@@ -186,8 +187,8 @@
       margin: 40px 0px;
     }
 
-    .card_flex {
-      width: 92%;
+    .card-flex {
+      width: 90%;
     }
   }
   .card {

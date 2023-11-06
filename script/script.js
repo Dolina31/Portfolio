@@ -10,7 +10,7 @@ const title = document.querySelector(".title");
 const aboutImage = document.querySelector(".about_image");
 const aboutText = document.querySelector(".about_text");
 const skillsImageWrapper = document.querySelectorAll(".skills_images_wrapper");
-const skillContent = document.querySelector(".skills_content");
+const skillsContent = document.querySelector(".skills_content");
 const h2Elements = document.querySelectorAll("h2");
 
 window.addEventListener("load", () => {
@@ -48,14 +48,23 @@ window.addEventListener("scroll", () => {
     aboutText.style.opacity = "1";
   }
 
-  if (scrollY > 1300 && scrollY < 1750) {
+  if (scrollY > 1300) {
     skillsImageWrapper.forEach((wrapper, index) => {
       setTimeout(() => {
         wrapper.style.transform = "translateY(0)";
         wrapper.style.opacity = "1";
-      }, index * 150 + 150);
+      }, index * 100 + 100);
     });
-    skillContent.style.width = "93%";
+    skillsContent.style.width = "93%";
+  }
+
+  if (scrollY > 2000) {
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.style.transform = "translateY(0)";
+        card.style.opacity = "1";
+      }, index * 250 + 250);
+    });
   }
 });
 
