@@ -20,12 +20,12 @@ body .return-home-icon {
   font-size: 1.5em;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.631372549);
-  box-shadow: 2px -1px 4px rgb(122, 121, 121);
+  box-shadow: 1px -1px 2px rgb(0, 0, 0);
   transition: box-shadow 0.6s;
   color: black;
 }
 body .return-home-icon:hover {
-  box-shadow: -2px 1px 4px rgb(122, 121, 121);
+  box-shadow: -1px 1px 2px rgb(0, 0, 0);
 }
 
 section {
@@ -53,6 +53,11 @@ main {
 }
 
 @media screen and (max-width: 492px) {
+  body .return-home-icon {
+    font-size: 1.2em;
+    background-color: unset;
+    box-shadow: unset;
+  }
   h2 {
     font-size: 1.9em;
   }
@@ -419,13 +424,11 @@ header .parallax_img {
   position: relative;
   height: 455px;
   padding: 15px;
-  background-color: rgba(185, 189, 179, 0.46);
+  background-color: #d9dac8;
   width: 42%;
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
   transform-style: preserve-3d;
-  opacity: 0;
-  transform: translateY(3em);
   transition: all 0.5s ease-in-out;
 }
 .card .card_frontside {
@@ -465,7 +468,7 @@ header .parallax_img {
   top: 0px;
   left: 0px;
   transform: rotateY(180deg);
-  background-color: rgba(185, 189, 179, 0.46);
+  background-color: #d9dac8;
   border-radius: 7px;
 }
 .card .card_backside .card_flip_backside_button {
@@ -510,7 +513,8 @@ header .parallax_img {
 }
 .card_backside_content .card_backside_line {
   height: 52%;
-  border: 1px solid black;
+  width: 2px;
+  background-color: black;
 }
 .card_backside_content .card_backside_button {
   width: 100%;
@@ -530,6 +534,7 @@ header .parallax_img {
   background-color: black;
   color: white;
   box-shadow: 3px 3px 5px rgb(73, 70, 70);
+  transition: all 0.2s;
 }
 .card_backside_content .card_backside_button button:hover {
   background-color: white;
@@ -571,10 +576,10 @@ header .parallax_img {
   }
   .card .card_frontside .card_flip_frontside_button {
     top: 18px;
-    right: 20px;
+    right: 10px;
   }
   .card .card_backside .card_flip_backside_button {
-    left: 20px;
+    left: 10px;
   }
   .card .card_backside_content {
     flex-direction: column;
@@ -589,7 +594,7 @@ header .parallax_img {
     height: 35px;
   }
   .card .card_backside_content .card_backside_line {
-    height: 0px;
+    height: 1px;
     width: 60%;
   }
   .card p {
@@ -619,6 +624,9 @@ header .parallax_img {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  transform: translateY(-0.5em);
+  opacity: 0;
+  transition: all 0.5s;
 }
 .contact_content .contact_link i {
   font-size: 1.7em;

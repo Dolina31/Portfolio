@@ -11,7 +11,8 @@ const aboutImage = document.querySelector(".about_image");
 const aboutText = document.querySelector(".about_text");
 const skillsImageWrapper = document.querySelectorAll(".skills_images_wrapper");
 const skillsContent = document.querySelector(".skills_content");
-const h2Elements = document.querySelectorAll("h2");
+const contactLinks = document.querySelectorAll(".contact_link");
+const cardBacksideLine = document.querySelectorAll(".card_backside_line");
 
 window.addEventListener("load", () => {
   navBar.style.opacity = "1";
@@ -29,26 +30,27 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  console.log(scrollY);
+  let scrollValue =
+    (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+  console.log(scrollValue);
 
   parallaxImage.style.transform = `translateY(${scrollY * 0.4}px)`;
   parallaxSkillsImage.style.transform = `translateY(-${scrollY * 0.4}px)`;
 
-  if (scrollY > 10) {
+  if (scrollValue > 0.18) {
     returnHomeIcon.style.visibility = "visible";
   } else {
     returnHomeIcon.style.visibility = "hidden";
   }
 
-  if (scrollY > 250) {
+  if (scrollValue > 0.3) {
     aboutImage.style.transform = "translateX(0)";
     aboutImage.style.opacity = "1";
     aboutText.style.transform = "translateX(0)";
     aboutText.style.opacity = "1";
   }
 
-  if (scrollY > 1300) {
+  if (scrollValue > 0.51) {
     skillsImageWrapper.forEach((wrapper, index) => {
       setTimeout(() => {
         wrapper.style.transform = "translateY(0)";
@@ -58,12 +60,12 @@ window.addEventListener("scroll", () => {
     skillsContent.style.width = "93%";
   }
 
-  if (scrollY > 2000) {
-    cards.forEach((card, index) => {
+  if (scrollValue == 1) {
+    contactLinks.forEach((link, index) => {
       setTimeout(() => {
-        card.style.transform = "translateY(0)";
-        card.style.opacity = "1";
-      }, index * 250 + 250);
+        link.style.opacity = "1";
+        link.style.transform = "translateY(0)";
+      }, index * 350 + 350);
     });
   }
 });

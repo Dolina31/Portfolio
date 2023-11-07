@@ -27,13 +27,12 @@
   position: relative;
   height: 455px;
   padding: 15px;
-  background-color: rgb(185 189 179 / 46%);
+  background-color: #d9dac8;
   width: 42%;
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
   transform-style: preserve-3d;
-  opacity: 0;
-  transform: translateY(3em);
+
   transition: all 0.5s ease-in-out;
 
   .card_frontside {
@@ -77,7 +76,7 @@
     top: 0px;
     left: 0px;
     transform: rotateY(180deg);
-    background-color: rgb(185 189 179 / 46%);
+    background-color: #d9dac8;
     border-radius: 7px;
 
     .card_flip_backside_button {
@@ -129,7 +128,8 @@
   }
   .card_backside_line {
     height: 52%;
-    border: 1px solid black;
+    width: 2px;
+    background-color: black;
   }
 
   .card_backside_button {
@@ -150,6 +150,7 @@
       background-color: black;
       color: white;
       box-shadow: 3px 3px 5px rgb(73, 70, 70);
+      transition: all 0.2s;
 
       &:hover {
         background-color: white;
@@ -200,13 +201,13 @@
       }
       .card_flip_frontside_button {
         top: 18px;
-        right: 20px;
+        right: 10px;
       }
     }
 
     .card_backside {
       .card_flip_backside_button {
-        left: 20px;
+        left: 10px;
       }
     }
 
@@ -225,7 +226,7 @@
       }
 
       .card_backside_line {
-        height: 0px;
+        height: 1px;
         width: 60%;
       }
     }
