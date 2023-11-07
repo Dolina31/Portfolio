@@ -53,11 +53,6 @@ main {
 }
 
 @media screen and (max-width: 492px) {
-  body .return-home-icon {
-    font-size: 1.2em;
-    background-color: unset;
-    box-shadow: unset;
-  }
   h2 {
     font-size: 1.9em;
   }
@@ -626,7 +621,7 @@ header .parallax_img {
   text-decoration: none;
   transform: translateY(-0.5em);
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.4s;
 }
 .contact_content .contact_link i {
   font-size: 1.7em;

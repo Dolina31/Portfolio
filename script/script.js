@@ -3,7 +3,7 @@ const parallaxImage = document.querySelector(".parallax_img");
 const parallaxSkillsImage = document.querySelector(".parallax-skills_img");
 const returnHomeIcon = document.querySelector(".return-home-icon");
 const navBar = document.querySelector(".navbar");
-const NavBarIcon = document.querySelector(".navbar-icon");
+const navBarIcon = document.querySelector(".navbar-icon");
 const navBarMenu = document.querySelector(".navbar_menu");
 const navBarMenuLink = document.querySelectorAll(".navbar_menu_link");
 const title = document.querySelector(".title");
@@ -11,8 +11,8 @@ const aboutImage = document.querySelector(".about_image");
 const aboutText = document.querySelector(".about_text");
 const skillsImageWrapper = document.querySelectorAll(".skills_images_wrapper");
 const skillsContent = document.querySelector(".skills_content");
+const contactSection = document.querySelector(".contact");
 const contactLinks = document.querySelectorAll(".contact_link");
-const cardBacksideLine = document.querySelectorAll(".card_backside_line");
 
 window.addEventListener("load", () => {
   navBar.style.opacity = "1";
@@ -30,45 +30,60 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("scroll", () => {
-  let scrollValue =
-    (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-  console.log(scrollValue);
-
   parallaxImage.style.transform = `translateY(${scrollY * 0.4}px)`;
   parallaxSkillsImage.style.transform = `translateY(-${scrollY * 0.4}px)`;
-
-  if (scrollValue > 0.18) {
-    returnHomeIcon.style.visibility = "visible";
-  } else {
-    returnHomeIcon.style.visibility = "hidden";
-  }
-
-  if (scrollValue > 0.3) {
-    aboutImage.style.transform = "translateX(0)";
-    aboutImage.style.opacity = "1";
-    aboutText.style.transform = "translateX(0)";
-    aboutText.style.opacity = "1";
-  }
-
-  if (scrollValue > 0.51) {
-    skillsImageWrapper.forEach((wrapper, index) => {
-      setTimeout(() => {
-        wrapper.style.transform = "translateY(0)";
-        wrapper.style.opacity = "1";
-      }, index * 100 + 100);
-    });
-    skillsContent.style.width = "93%";
-  }
-
-  if (scrollValue == 1) {
-    contactLinks.forEach((link, index) => {
-      setTimeout(() => {
-        link.style.opacity = "1";
-        link.style.transform = "translateY(0)";
-      }, index * 350 + 350);
-    });
-  }
+  returnHomeIcon.style.visibility = "visible";
 });
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      switch (entry.target) {
+        case aboutImage:
+          aboutImage.style.transform = "translateX(0)";
+          aboutImage.style.opacity = "1";
+          break;
+        case aboutText:
+          aboutText.style.transform = "translateX(0)";
+          aboutText.style.opacity = "1";
+          break;
+        case skillsContent:
+          skillsContent.style.width = "93%";
+          setTimeout(() => {
+            skillsImageWrapper.forEach((wrapper, index) => {
+              setTimeout(() => {
+                wrapper.style.transform = "translateY(0)";
+                wrapper.style.opacity = "1";
+              }, index * 100 + 100);
+            });
+          }, 100);
+          break;
+        case contactSection:
+          contactLinks.forEach((link, index) => {
+            setTimeout(() => {
+              link.style.opacity = "1";
+              link.style.transform = "translateY(0)";
+            }, index * 300 + 300);
+          });
+          break;
+      }
+    }
+  });
+});
+
+observer.observe(parallaxImage);
+observer.observe(parallaxSkillsImage);
+observer.observe(returnHomeIcon);
+observer.observe(aboutImage);
+observer.observe(aboutText);
+skillsImageWrapper.forEach((wrapper) => {
+  observer.observe(wrapper);
+});
+observer.observe(skillsContent);
+contactLinks.forEach((link) => {
+  observer.observe(link);
+});
+observer.observe(contactSection);
 
 cards.forEach((card) => {
   const cardBackSide = card.querySelector(".card_backside");
@@ -96,7 +111,7 @@ cards.forEach((card) => {
 
 let isNavbarVisible = false;
 
-NavBarIcon.addEventListener("click", () => {
+navBarIcon.addEventListener("click", () => {
   if (isNavbarVisible) {
     navBarMenu.style.display = "none";
   } else {
