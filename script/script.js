@@ -35,7 +35,7 @@ window.addEventListener("scroll", () => {
   returnHomeIcon.style.visibility = "visible";
 });
 
-const observer = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       switch (entry.target) {
@@ -76,6 +76,7 @@ observer.observe(parallaxSkillsImage);
 observer.observe(returnHomeIcon);
 observer.observe(aboutImage);
 observer.observe(aboutText);
+observer.observe(contactSection);
 skillsImageWrapper.forEach((wrapper) => {
   observer.observe(wrapper);
 });
@@ -83,15 +84,14 @@ observer.observe(skillsContent);
 contactLinks.forEach((link) => {
   observer.observe(link);
 });
-observer.observe(contactSection);
 
 cards.forEach((card) => {
   const cardBackSide = card.querySelector(".card_backside");
   const cardFlipFrontsideButton = card.querySelectorAll(
-    ".card_flip_frontside_button"
+    ".card_frontside_flip_button"
   );
   const cardFlipBacksideButton = card.querySelectorAll(
-    ".card_flip_backside_button"
+    ".card_backside_flip_button"
   );
 
   cardFlipFrontsideButton.forEach((button) => {
@@ -110,7 +110,6 @@ cards.forEach((card) => {
 });
 
 let isNavbarVisible = false;
-
 navBarIcon.addEventListener("click", () => {
   if (isNavbarVisible) {
     navBarMenu.style.display = "none";
