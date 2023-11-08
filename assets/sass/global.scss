@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Comfortaa", cursive;
   font-size: 1.2rem;

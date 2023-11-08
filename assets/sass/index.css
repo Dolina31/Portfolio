@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Comfortaa", cursive;
   font-size: 1.2rem;
@@ -348,6 +352,9 @@ header .parallax_img {
   .skills h2 {
     margin: 40px 0px 20px;
   }
+  .skills .skills_content {
+    width: 85%;
+  }
   .skills_images_flex {
     gap: 20px;
     padding-left: 0px;
@@ -373,7 +380,7 @@ header .parallax_img {
 }
 @media screen and (max-width: 400px) {
   .skills .skills_content {
-    width: 100%;
+    width: 88%;
   }
   .skills_images_flex {
     gap: 10px;
