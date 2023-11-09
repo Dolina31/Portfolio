@@ -37,16 +37,19 @@
 
     p {
       max-height: 500px;
-      font-weight: 400;
+      font-weight: 100;
       line-height: 1.8em;
       font-size: 0.9em;
 
       a {
         color: black;
         font-weight: 700;
-        font-size: 1.05em;
+        text-decoration: none;
       }
 
+      i {
+        font-size: 0.8em;
+      }
       .about_text_important {
         font-weight: 700;
         background-color: #e2e2e2;
@@ -79,6 +82,12 @@
 
 @media screen and (max-width: 880px) {
   .about {
+    height: 122vh;
+
+    .about_content {
+      width: 95%;
+    }
+
     img {
       width: 100%;
     }

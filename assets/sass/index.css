@@ -253,14 +253,17 @@ header .parallax_img {
 }
 .about .about_text p {
   max-height: 500px;
-  font-weight: 400;
+  font-weight: 100;
   line-height: 1.8em;
   font-size: 0.9em;
 }
 .about .about_text p a {
   color: black;
   font-weight: 700;
-  font-size: 1.05em;
+  text-decoration: none;
+}
+.about .about_text p i {
+  font-size: 0.8em;
 }
 .about .about_text p .about_text_important {
   font-weight: 700;
@@ -284,6 +287,12 @@ header .parallax_img {
   }
 }
 @media screen and (max-width: 880px) {
+  .about {
+    height: 122vh;
+  }
+  .about .about_content {
+    width: 95%;
+  }
   .about img {
     width: 100%;
   }
