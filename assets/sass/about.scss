@@ -2,7 +2,7 @@
   background-color: white;
   position: relative;
   z-index: 4;
-  height: 108vh;
+  height: 110vh;
   justify-content: center;
 
   .about_content {
@@ -37,9 +37,20 @@
 
     p {
       max-height: 500px;
-      font-weight: 700;
+      font-weight: 400;
       line-height: 1.8em;
       font-size: 0.9em;
+
+      a {
+        color: black;
+        font-weight: 700;
+        font-size: 1.05em;
+      }
+
+      .about_text_important {
+        font-weight: 700;
+        background-color: #e2e2e2;
+      }
     }
   }
 }
@@ -58,6 +69,10 @@
 
     .about_text {
       width: 100%;
+
+      h2 {
+        margin-bottom: 15px;
+      }
     }
   }
 }
