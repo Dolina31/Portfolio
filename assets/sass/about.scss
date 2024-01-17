@@ -19,10 +19,10 @@
     height: 75%;
     width: 45%;
     object-fit: cover;
+    border: 2px solid black;
     transform: translateX(-7em);
     opacity: 0;
     transition: all 0.7s ease-in-out;
-    border: 2px solid black;
   }
 
   .about_text {

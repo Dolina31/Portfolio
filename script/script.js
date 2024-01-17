@@ -86,26 +86,35 @@ contactLinks.forEach((link) => {
 });
 
 cards.forEach((card) => {
-  const cardBackSide = card.querySelector(".card_backside");
-  const cardFlipFrontsideButton = card.querySelectorAll(
-    ".card_frontside_flip_button"
+  const cardInfosSection = card.querySelector(".card_infos-section");
+  const cardPreviewSection = card.querySelector(".card_preview-section");
+  const cardButtons = card.querySelector(
+    ".card_infos-section_content .card_infos-section_buttons"
   );
-  const cardFlipBacksideButton = card.querySelectorAll(
-    ".card_backside_flip_button"
-  );
+  const cardMobileMediaQuery = window.matchMedia("(max-width:530px)");
+  const cardTitle = card.querySelector(".card_title");
 
-  cardFlipFrontsideButton.forEach((button) => {
-    button.addEventListener("click", () => {
-      cardBackSide.style.visibility = "visible";
-      card.style.transform = "rotateY(180deg)";
-    });
-  });
+  card.addEventListener("click", (e) => {
+    if (cardButtons.contains(e.target)) {
+      return;
+    }
+    if (cardPreviewSection.style.opacity === "0") {
+      cardPreviewSection.style.opacity = "1";
+      cardInfosSection.style.opacity = "0";
+      cardTitle.style.opacity = "1";
+    } else {
+      if (cardMobileMediaQuery.matches) {
+        cardTitle.style.opacity = "0";
+      }
+      cardPreviewSection.style.opacity = "0";
+      cardInfosSection.style.opacity = "1";
+    }
 
-  cardFlipBacksideButton.forEach((button) => {
-    button.addEventListener("click", () => {
-      card.style.transform = "rotateY(0deg)";
-      card.style.backfaceVisibility = "visible";
-    });
+    if (cardInfosSection.style.opacity === "1") {
+      cardButtons.style.display = "flex";
+    } else {
+      cardButtons.style.display = "none";
+    }
   });
 });
 

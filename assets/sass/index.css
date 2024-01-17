@@ -237,10 +237,10 @@ header .parallax_img {
   height: 75%;
   width: 45%;
   object-fit: cover;
+  border: 2px solid black;
   transform: translateX(-7em);
   opacity: 0;
   transition: all 0.7s ease-in-out;
-  border: 2px solid black;
 }
 .about .about_text {
   width: 50%;
@@ -427,6 +427,8 @@ header .parallax_img {
   font-family: "Caveat", cursive;
   font-size: 2.1rem;
   letter-spacing: 0.3em;
+  text-align: center;
+  transition: all 0.4s;
 }
 
 .card-flex {
@@ -438,68 +440,66 @@ header .parallax_img {
 .card-flex .card {
   height: 455px;
   padding: 15px;
-  background-color: #d9dac8;
-  width: 42%;
-  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+  background-color: rgb(230, 230, 230);
+  width: 40%;
+  box-shadow: 1px 2px 7px #b6b6b6;
   transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
   transform-style: preserve-3d;
   transition: all 0.5s ease-in-out;
-}
-.card-flex .card .card_frontside,
-.card-flex .card .card_backside {
-  backface-visibility: hidden;
+  cursor: pointer;
 }
 .card-flex .card:hover {
   box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.4);
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
-.card-flex .card:hover .card_line_top {
+.card-flex .card:hover .card_preview-section_top-line {
   transform: translateX(50%);
 }
-.card-flex .card:hover .card_line_bottom {
+.card-flex .card:hover .card_preview-section_bottom-line {
   transform: translateX(-50%);
 }
-.card-flex .card:hover .card_img {
+.card-flex .card:hover .card_preview-section_img {
   width: 105%;
 }
+.card-flex .card:hover .card_infos-section_line {
+  height: 52%;
+}
 
-.card_frontside {
+.card_preview-section {
   display: flex;
   flex-direction: column;
+  display: flex;
   align-items: center;
   gap: 15px;
-  height: 100%;
+  height: 85%;
+  width: 100%;
+  opacity: 1;
+  transition: all 0.3s ease-in;
+  margin-top: 10px;
 }
-.card_frontside .card_frontside_lines {
+.card_preview-section .card_preview-section_lines {
   margin-top: 5px;
   margin-bottom: 5px;
   height: 1px;
   background-color: black;
   width: 45%;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
-.card_frontside .card_frontside_flip_button {
-  position: absolute;
-  top: 22px;
-  right: 50px;
-  font-size: 1.7em;
-  cursor: pointer;
-}
-.card_frontside .card_img {
+.card_preview-section .card_preview-section_img {
   width: 100%;
-  height: 70%;
+  height: 90%;
   display: flex;
   justify-content: center;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
-.card_frontside .card_img img {
+.card_preview-section .card_preview-section_img img {
   width: 90%;
   aspect-ratio: 5/2;
   object-fit: cover;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.card_backside {
+.card_infos-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -507,19 +507,13 @@ header .parallax_img {
   height: 100%;
   width: 100%;
   top: 0px;
-  left: 0px;
-  transform: rotateY(180deg);
+  right: 0px;
   border-radius: 7px;
-}
-.card_backside .card_backside_flip_button {
-  position: absolute;
-  top: 22px;
-  left: 50px;
-  font-size: 1.7em;
-  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease-in;
 }
 
-.card_backside_content {
+.card_infos-section_content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -527,31 +521,34 @@ header .parallax_img {
   height: 100%;
   width: 90%;
 }
-.card_backside_content p {
+.card_infos-section_content p {
   line-height: 1.5em;
 }
-.card_backside_content .card_backside_icons {
+.card_infos-section_content .card_infos-section_icons {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.card_backside_content .card_backside_icons .card_backside_icon {
+.card_infos-section_content .card_infos-section_icons .card_backside_icon {
   height: 50px;
 }
-.card_backside_content .card_backside_line {
-  height: 52%;
+.card_infos-section_content .card_infos-section_line {
+  height: 40%;
   width: 2px;
   background-color: black;
+  transition: all 0.3s ease-in-out;
 }
-.card_backside_content .card_backside_buttons {
+.card_infos-section_content .card_infos-section_buttons {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 20px;
   position: absolute;
+  left: 0px;
   bottom: 5%;
+  display: none;
 }
-.card_backside_content .card_backside_buttons button {
+.card_infos-section_content .card_infos-section_buttons button {
   cursor: pointer;
   font-family: "caveat", cursive;
   font-size: 1.1em;
@@ -563,14 +560,14 @@ header .parallax_img {
   box-shadow: 3px 3px 5px rgb(73, 70, 70);
   transition: all 0.2s;
 }
-.card_backside_content .card_backside_buttons button:hover {
+.card_infos-section_content .card_infos-section_buttons button:hover {
   background-color: white;
   color: black;
 }
 
 @media screen and (max-width: 1000px) {
   .card-flex .card {
-    width: 90%;
+    width: 85%;
   }
   .card {
     width: 90%;
@@ -591,29 +588,26 @@ header .parallax_img {
   .card-flex .card {
     height: 370px;
   }
-  .card_frontside h3 {
+  .card-flex .card:hover .card_infos-section_line {
+    height: 1px;
+    width: 70%;
+  }
+  .card_preview-section h3 {
     font-size: 1.4em;
   }
-  .card_frontside .card_frontside_flip_button {
-    top: 18px;
-    right: 10px;
-  }
-  .card_backside .card_backside_flip_button {
-    left: 10px;
-  }
-  .card_backside_content {
+  .card_infos-section_content {
     flex-direction: column;
     justify-content: unset;
     margin-top: 45px;
     gap: 15px;
   }
-  .card_backside_content .card_backside_icons {
+  .card_infos-section_content .card_infos-section_icons {
     flex-direction: row;
   }
-  .card_backside_content .card_backside_icons .card_backside_icon {
+  .card_infos-section_content .card_infos-section_icons .card_backside_icon {
     height: 35px;
   }
-  .card_backside_content .card_backside_line {
+  .card_infos-section_content .card_infos-section_line {
     height: 1px;
     width: 60%;
   }
