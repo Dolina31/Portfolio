@@ -20,13 +20,14 @@ body {
     padding: 5px;
     font-size: 1.3em;
     border-radius: 50%;
-    background-color: #ffffffa1;
+    color: white;
+    background-color: #d9dac8;
     box-shadow: 0px 0px 2px rgb(0, 0, 0);
-    transition: box-shadow 0.6s;
+    transition: all 0.3s;
 
     &:hover {
       color: white;
-      background-color: #d9dac8;
+      transform: scale(1.2);
     }
   }
 }

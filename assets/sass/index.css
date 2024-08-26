@@ -20,13 +20,14 @@ body .return-home-icon {
   padding: 5px;
   font-size: 1.3em;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.631372549);
+  color: white;
+  background-color: #d9dac8;
   box-shadow: 0px 0px 2px rgb(0, 0, 0);
-  transition: box-shadow 0.6s;
+  transition: all 0.3s;
 }
 body .return-home-icon:hover {
   color: white;
-  background-color: #d9dac8;
+  transform: scale(1.2);
 }
 
 section {
@@ -221,7 +222,7 @@ header .parallax_img {
   background-color: white;
   position: relative;
   z-index: 4;
-  height: 110vh;
+  padding: 80px 0px;
   justify-content: center;
 }
 .about .about_content {
@@ -230,32 +231,33 @@ header .parallax_img {
   justify-content: center;
   gap: 50px;
   height: 80%;
-  width: 85%;
+  width: 89%;
 }
 .about img {
-  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
-  height: 75%;
-  width: 45%;
+  height: 700px;
+  width: 38%;
   object-fit: cover;
-  border: 2px solid black;
-  transform: translateX(-7em);
+  transform: translateX(-3em);
   opacity: 0;
   transition: all 0.7s ease-in-out;
 }
-.about .about_text {
-  width: 50%;
-  transform: translateX(7em);
-  opacity: 0;
-  transition: all 0.7s 0.3s ease-in-out;
+.about .about_line {
+  display: block;
+  width: 20px;
+  margin: 20px 0px;
+  height: 2px;
+  background: black;
 }
-.about .about_text h2 {
-  margin-bottom: 30px;
+.about .about_text {
+  width: 60%;
 }
 .about .about_text p {
-  max-height: 500px;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.8em;
-  font-size: 0.9em;
+  font-size: 1em;
+  transform: translateY(-25px);
+  opacity: 0;
+  transition: all 0.7s 0.5s ease-in-out;
 }
 .about .about_text p a {
   color: black;
@@ -270,42 +272,40 @@ header .parallax_img {
   background-color: #e2e2e2;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 880px) {
+  .about {
+    padding: 40px 0px;
+  }
   .about .about_content {
     gap: 20px;
     flex-direction: column;
+    width: 95%;
   }
   .about img {
     height: 50%;
-    width: 100%;
+    width: 65%;
   }
   .about .about_text {
+    text-align: unset;
+    font-size: 0.8em;
     width: 100%;
   }
   .about .about_text h2 {
     margin-bottom: 15px;
   }
 }
-@media screen and (max-width: 880px) {
-  .about {
-    height: 122vh;
-  }
-  .about .about_content {
-    width: 95%;
-  }
+@media screen and (max-width: 576px) {
   .about img {
-    width: 100%;
+    width: 90%;
   }
-  .about .about_text {
-    text-align: unset;
-    font-size: 0.8em;
+  .about .about_text p {
+    transition: all 0.7s 0s ease-in-out;
   }
 }
 .skills {
   z-index: 3;
   padding: 30px;
   position: relative;
-  height: 80vh;
   justify-content: center;
 }
 .skills .parallax-skills_img {
@@ -318,7 +318,7 @@ header .parallax_img {
   object-fit: cover;
 }
 .skills .skills_content {
-  width: 45%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
