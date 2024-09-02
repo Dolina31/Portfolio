@@ -1,9 +1,15 @@
+.about_transition_img {
+  width: 100%;
+  transform: translateY(10px);
+}
+
 .about {
   background-color: white;
   position: relative;
   z-index: 4;
-  padding: 80px 0px;
+  padding: 80px 0px 110px 0px;
   justify-content: center;
+  overflow: hidden;
 
   .about_content {
     display: flex;
@@ -14,25 +20,38 @@
     width: 89%;
   }
 
-  img {
-    height: 700px;
-    width: 38%;
+  .about_image {
+    height: 713px;
+    width: 40%;
     object-fit: cover;
     transform: translateX(-3em);
-    opacity: 0;
     transition: all 0.7s ease-in-out;
+    opacity: 0;
+  }
+
+  .about_background-img {
+    object-fit: cover;
+    transform: translateX(-3em);
+    transition: all 0.7s ease-in-out;
+    position: absolute;
+    left: 30px;
+    z-index: -2;
+    height: 100%;
+    @include bounce(-30px, 5s, infinite, project-bounce);
   }
 
   .about_line {
     display: block;
     width: 20px;
     margin: 20px 0px;
-    height: 2px;
+    height: 1px;
     background: black;
   }
 
   .about_text {
     width: 60%;
+    padding: 30px;
+    background: #ffffffcf;
 
     p {
       font-weight: 300;
@@ -40,7 +59,7 @@
       font-size: 1em;
       transform: translateY(-25px);
       opacity: 0;
-      transition: all 0.7s 0.5s ease-in-out;
+      transition: all 0.5s 0.3s ease-in-out;
 
       a {
         color: black;
@@ -54,8 +73,20 @@
 
       .about_text_important {
         font-weight: 700;
-        background-color: #e2e2e2;
+        background-color: #ffcc8b;
+        color: black;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about {
+    .about_background-img {
+      left: -50%;
+    }
+    .about_content {
+      width: 95%;
     }
   }
 }
@@ -70,7 +101,7 @@
       width: 95%;
     }
 
-    img {
+    .about_image {
       height: 50%;
       width: 65%;
     }
@@ -78,7 +109,7 @@
     .about_text {
       text-align: unset;
       font-size: 0.8em;
-      width: 100%;
+      width: 90%;
 
       h2 {
         margin-bottom: 15px;
@@ -89,8 +120,18 @@
 
 @media screen and (max-width: 576px) {
   .about {
-    img {
+    .about_image {
       width: 90%;
+    }
+
+    .about_text {
+      text-align: unset;
+      font-size: 0.8em;
+      width: 85%;
+    }
+    .about_background-img {
+      left: -97% !important;
+      top: -9%;
     }
 
     .about_text {

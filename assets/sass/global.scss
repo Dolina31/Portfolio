@@ -60,3 +60,20 @@ main {
     font-size: 1.9em;
   }
 }
+
+/* ------------------*/
+@mixin bounce($distance, $duration, $iteration, $name: bounce) {
+  @keyframes #{$name} {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(#{$distance});
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  animation: #{$name} $duration ease $iteration;
+}

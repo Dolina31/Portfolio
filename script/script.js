@@ -14,11 +14,9 @@ const skillsContent = document.querySelector(".skills_content");
 const contactSection = document.querySelector(".contact");
 const contactLinks = document.querySelectorAll(".contact_link");
 
-console.log(aboutText);
-
 window.addEventListener("load", () => {
   navBar.style.opacity = "1";
-  navBar.style.padding = "30px 0px";
+  navBar.style.padding = "20px 0px";
 
   navBarMenuLink.forEach((link, index) => {
     setTimeout(() => {
@@ -27,7 +25,6 @@ window.addEventListener("load", () => {
     }, index * 100 + 100);
   });
 
-  title.style.width = "100%";
   title.style.opacity = "1";
 });
 
@@ -84,7 +81,7 @@ window.addEventListener("scroll", () => {
 const options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.55,
+  threshold: 0.35,
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -137,3 +134,50 @@ observer.observe(skillsContent);
 contactLinks.forEach((link) => {
   observer.observe(link);
 });
+
+//Création des cards
+fetch("/projects.json")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+
+    const projectsContainer = document.querySelector(".card-flex");
+    console.log(projectsContainer);
+
+    let cardsHTML = "";
+    data.forEach((project) => {
+      const formattedResume = project.resume.replace(/\n/g, "<br>");
+
+      // Générer les tags avec les icônes
+      const formattedTags = Object.entries(project.tags)
+        .map(([tag, imgSrc]) => `<div class="card_tag">${tag}</div>`)
+        .join(" ");
+
+      // Ajouter un lien "voir le site" seulement si l'URL est définie
+      const viewSiteButton = project.url
+        ? `<a href="${project.url}" target="_blank">voir le site</a>`
+        : "";
+
+      cardsHTML += `
+        <div class="card">
+          <div class="card_content">
+            <div class="card_cover-img"> 
+              <img src="${project.cover}" alt="${project.coverAlt}">
+            </div> 
+            <div class="card_tags">${formattedTags}</div>
+            <h3>${project.title}</h3>
+            <p>${formattedResume}</p>
+            <div class="card_buttons">
+              ${viewSiteButton}
+              <a href="${project.codeUrl}" target="_blank">voir le code</a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    projectsContainer.innerHTML = cardsHTML;
+  })
+  .catch((error) => {
+    console.error("Erreur lors du chargement des projets:", error);
+  });

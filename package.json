@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "sass": "^1.69.0"
+    "sass": "^1.77.8"
   },
   "scripts": {
     "sass": "sass --watch assets/sass/index.scss:assets/sass/index.css"

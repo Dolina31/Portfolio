@@ -1,0 +1,94 @@
+[
+    {
+        "id": "1",
+        "title": "Booki",
+        "cover": "/assets/images/projects/booki-banner.avif",
+        "coverAlt": "Un lit avec des draps blancs et des oreillers jaunes dans une chambre d'hôtel",
+        "resume": "Ma mission sur ce projet consistait à concrétiser les concepts élaborés par l'UI designer en les intégrant avec HTML et CSS.\nL'objectif principal était de créer un site web réactif qui puisse s'adapter à toute les tailles d'écrans.",
+        "description": "",
+        "tags": {
+            "Html": "/assets/images/software-logo/html5.svg",
+            "Css": "/assets/images/software-logo/css3.svg"
+        },
+        "url": "https://dolina31.github.io/P3-openclassroom/",
+        "codeUrl": "https://github.com/Dolina31/P3-openclassroom"
+    },
+    {
+        "id": "2",
+        "title": "Ohmyfood",
+        "cover": "/assets/images/projects/ohmyfood-banner.avif",
+        "resume": "Ce projet a été pensé en mobile first pour garantir une expérience utilisateur optimale sur tous les appareils. \n Des animations ainsi qu'un loading ont été intégrées pour rendre le site plus interactif. Le code à été organisé et optimisé avec Sass.",
+        "description": "",
+        "tags": {
+            "Html": "/assets/images/software-logo/html5.svg",
+            "Css": "/assets/images/software-logo/css3.svg",
+            "Sass": "/assets/images/software-logo/sass.svg"
+        },
+        "url": "https://dolina31.github.io/P3-openclassroom/",
+        "codeUrl": "https://github.com/Dolina31/P3-openclassroom"
+    },
+    {
+        "id": "3",
+        "title": "Sophie Bluel",
+        "cover": "/assets/images/projects/sophie-bluel-banner.avif",
+        "resume": "Conception du portfolio de l'architecte Sophie Bluel.\n Présentation des travaux avec des filtres par catégorie, création d'un login et d'une page d'administration permettant d'ajouter/supprimer des projets. ",
+        "description": "",
+        "tags": {
+            "Html": "/assets/images/software-logo/html5.svg",
+            "Css": "/assets/images/software-logo/css3.svg",
+            "Javascript": "/assets/images/software-logo/javascript.svg"
+        },
+        "codeUrl": "https://github.com/Dolina31/P6-openclassroom"
+    },
+    {
+        "id": "4",
+        "title": "Nina Carducci",
+        "cover": "/assets/images/projects/nina-carducci-banner.avif",
+        "resume": "Projet visant à optimiser le portfolio de Nina Carducci, une photographe. \n Optimisation des images, mise en place du référencement local et ajout de méta pour les réseaux sociaux. Amélioration du SEO et de l'accessibilité avec Lighthouse et Wave. ",
+        "description": "",
+        "tags": {
+            "Seo": "/assets/images/software-logo/seo.svg"
+        },
+        "url": "https://dolina31.github.io/P9-Openclassroom/",
+        "codeUrl": "https://github.com/Dolina31/P9-Openclassroom"
+    },
+    {
+        "id": "5",
+        "title": "Kasa",
+        "cover": "/assets/images/projects/kasa-banner.avif",
+        "resume": "Refonte d'un site de location d'appartements avec React. \n Création des composants et routes nécessaires, intégration dynamique des hôtes, descriptions et évaluations de chaque logement. ",
+        "description": "",
+        "tags": {
+            "React": "/assets/images/software-logo/react.svg",
+            "Sass": "/assets/images/software-logo/sass.svg"
+        },
+        "codeUrl": "https://github.com/Dolina31/P8-openclassroom"
+    },
+    {
+        "id": "6",
+        "title": "ArgentBank",
+        "cover": "/assets/images/projects/argentbank-banner.avif",
+        "resume": "Gestion des connexions utilisateurs, affichage de leurs comptes, ajout de la possibilité de modifier leur pseudo. \n Création de nouvelles routes API pour la future gestion des transactions.",
+        "description": "",
+        "tags": {
+            "React": "/assets/images/software-logo/react.svg",
+            "Redux": "/assets/images/software-logo/redux.svg",
+            "Swagger": "/assets/images/software-logo/swagger.svg"
+        },
+        "codeUrl": "https://github.com/Dolina31/P8-openclassroom"
+    },
+    {
+        "id": "7",
+        "title": "Anazir",
+        "cover": "/assets/images/projects/anazir-banner.jpeg",
+        "resume": "Création du site du jeux mobile Anazir. \nIntégration de web3.js pour la connexion à un wallet blockchain. Utilisation de Vite pour optimiser le projet.\n Fait from strach en toute autonomie",
+        "description": "",
+        "tags": {
+            "Html": "/assets/images/software-logo/html5.svg",
+            "Css": "/assets/images/software-logo/css3.svg",
+            "Javascript": "/assets/images/software-logo/javascript.svg"
+        },
+        "url": "https://anazirgame.com/",
+        "codeUrl": "https://github.com/Dolina31/Anazir"
+    }
+]
