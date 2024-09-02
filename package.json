@@ -3,6 +3,6 @@
     "sass": "^1.77.8"
   },
   "scripts": {
-    "sass": "sass --watch assets/sass/index.scss:assets/sass/index.css"
+    "sass": "sass --watch /style/index.scss:style/index.css"
   }
 }
