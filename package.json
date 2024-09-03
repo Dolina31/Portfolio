@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "vite": "^5.4.2"
   },
   "scripts": {
     "sass": "sass --watch /style/index.scss:style/index.css"
