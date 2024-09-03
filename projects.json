@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "Booki",
-        "cover": "./assets/static/images/projects/booki-banner.avif",
+        "cover": "./assets/images/booki-banner.avif",
         "coverAlt": "Un lit avec des draps blancs et des oreillers jaunes dans une chambre d'hôtel",
         "resume": "Ma mission sur ce projet consistait à concrétiser les concepts élaborés par l'UI designer en les intégrant avec HTML et CSS.\nL'objectif principal était de créer un site web réactif qui puisse s'adapter à toute les tailles d'écrans.",
         "description": "",
@@ -16,7 +16,7 @@
     {
         "id": "2",
         "title": "Ohmyfood",
-        "cover": "./assets/static/images/projects/ohmyfood-banner.avif",
+        "cover": "./assets/images/ohmyfood-banner.avif",
         "resume": "Ce projet a été pensé en mobile first pour garantir une expérience utilisateur optimale sur tous les appareils. \n Des animations ainsi qu'un loading ont été intégrées pour rendre le site plus interactif. Le code à été organisé et optimisé avec Sass.",
         "description": "",
         "tags": {
@@ -30,7 +30,7 @@
     {
         "id": "3",
         "title": "Sophie Bluel",
-        "cover": "./assets/static/images/projects/sophie-bluel-banner.avif",
+        "cover": "./assets/images/sophie-bluel-banner.avif",
         "resume": "Conception du portfolio de l'architecte Sophie Bluel.\n Présentation des travaux avec des filtres par catégorie, création d'un login et d'une page d'administration permettant d'ajouter/supprimer des projets. ",
         "description": "",
         "tags": {
@@ -43,7 +43,7 @@
     {
         "id": "4",
         "title": "Nina Carducci",
-        "cover": "./assets/static/images/projects/nina-carducci-banner.avif",
+        "cover": "./assets/images/nina-carducci-banner.avif",
         "resume": "Projet visant à optimiser le portfolio de Nina Carducci, une photographe. \n Optimisation des images, mise en place du référencement local et ajout de méta pour les réseaux sociaux. Amélioration du SEO et de l'accessibilité avec Lighthouse et Wave. ",
         "description": "",
         "tags": {
@@ -55,7 +55,7 @@
     {
         "id": "5",
         "title": "Kasa",
-        "cover": "./assets/static/images/projects/kasa-banner.avif",
+        "cover": "./assets/images/kasa-banner.avif",
         "resume": "Refonte d'un site de location d'appartements avec React. \n Création des composants et routes nécessaires, intégration dynamique des hôtes, descriptions et évaluations de chaque logement. ",
         "description": "",
         "tags": {
@@ -67,7 +67,7 @@
     {
         "id": "6",
         "title": "ArgentBank",
-        "cover": "./assets/static/images/projects/argentbank-banner.avif",
+        "cover": "./assets/images/argentbank-banner.avif",
         "resume": "Gestion des connexions utilisateurs, affichage de leurs comptes, ajout de la possibilité de modifier leur pseudo. \n Création de nouvelles routes API pour la future gestion des transactions.",
         "description": "",
         "tags": {
@@ -80,7 +80,7 @@
     {
         "id": "7",
         "title": "Anazir",
-        "cover": "./assets/static/images/projects/anazir-banner.jpeg",
+        "cover": "./assets/images/anazir-banner.jpeg",
         "resume": "Création du site du jeux mobile Anazir. \nIntégration de web3.js pour la connexion à un wallet blockchain. Utilisation de Vite pour optimiser le projet.\n Fait from strach en toute autonomie",
         "description": "",
         "tags": {
