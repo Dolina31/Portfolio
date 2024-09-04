@@ -4,6 +4,6 @@
     "vite": "^5.4.2"
   },
   "scripts": {
-    "sass": "sass --watch /style/index.scss:style/index.css"
+    "sass": "sass --watch /sass/index.scss:/sass/index.css"
   }
 }

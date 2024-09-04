@@ -8,6 +8,8 @@
 
   h2 {
     margin: 80px 0px;
+    padding: 0px 12px;
+    background-color: #ffbe6c;
   }
 }
 
@@ -21,7 +23,7 @@
   .card {
     border-radius: 3px;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ebeee7;
     box-shadow: 1px 2px 7px #b6b6b6;
     transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
     transform-style: preserve-3d;
@@ -34,12 +36,11 @@
       flex-direction: column;
 
       h3 {
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
+        font-weight: 100;
         margin: 18px 0px 20px;
-        font-size: 2rem;
+        font-size: 2.4rem;
         letter-spacing: 0.1em;
-        font-weight: 600;
+        font-family: "caveat", cursive;
       }
 
       .card_cover-img {
@@ -75,16 +76,15 @@
   margin-bottom: 10px;
 
   a {
+    box-shadow: 2px 2px 5px grey;
     text-decoration: none;
     cursor: pointer;
     font-family: "caveat", cursive;
     font-size: 1.1em;
     padding: 7px 15px;
     border: none;
-    border-radius: 50px;
-    background-color: black;
-    color: white;
-    box-shadow: 3px 3px 5px rgb(73, 70, 70);
+    background-color: rgba(255, 255, 255, 0.69);
+    color: #000000;
     transition: all 0.2s;
 
     &:hover {
@@ -102,20 +102,18 @@
   .tag {
     font-size: 0.9em;
     padding: 3px 10px;
-    background: black;
     color: white;
     border-radius: 20px;
   }
 
   .card_tag {
-    padding: 3px 3px;
-    border-radius: 5px;
-    padding: 4px 10px;
-    background-color: rgb(199 199 199 / 33%);
-    color: #5a5a5a;
-    border-radius: 20px;
-    font-size: 0.9em;
+    font-family: "caveat", cursive;
+    padding: 0px 10px;
+    background-color: rgba(255, 255, 255, 0.69);
+    color: #000000;
+    font-size: 1.2em;
     font-weight: bold;
+    font-weight: 100;
   }
 
   .card_tag-icon {
