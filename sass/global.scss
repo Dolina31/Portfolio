@@ -22,12 +22,12 @@ body {
     border-radius: 50%;
     color: white;
     background-color: #d9dac8;
-    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    border: 1px solid rgb(179, 176, 176);
     transition: all 0.3s;
 
     &:hover {
+      background-color: #ffcc8b;
       color: white;
-      transform: scale(1.2);
     }
   }
 }

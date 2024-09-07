@@ -40,9 +40,9 @@ window.addEventListener("load", () => {
 let isNavbarVisible = false;
 navBarIcon.addEventListener("click", () => {
   if (isNavbarVisible) {
-    navBarMenu.style.display = "none";
+    navBarMenu.style.visibility = "hidden";
   } else {
-    navBarMenu.style.display = "flex";
+    navBarMenu.style.visibility = "visible";
   }
 
   isNavbarVisible = !isNavbarVisible;
@@ -120,8 +120,8 @@ fetch("/projects.json")
       const formattedResume = project.resume.replace(/\n/g, "<br>");
 
       // Générer les tags avec les icônes
-      const formattedTags = Object.entries(project.tags)
-        .map(([tag, imgSrc]) => `<div class="card_tag">${tag}</div>`)
+      const formattedTags = project.tags
+        .map((tag) => `<div class="card_tag">${tag}</div>`)
         .join(" ");
 
       // Ajouter un lien "voir le site" seulement si l'URL est définie

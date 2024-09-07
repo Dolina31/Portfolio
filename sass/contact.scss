@@ -1,19 +1,19 @@
 .contact {
-  background-color: #1d1d1d;
-  padding: 15px;
-
+  margin-bottom: 190px;
   h2 {
-    margin: 30px 0px 80px 0px;
+    margin: 30px 0px 15px 0px;
   }
 }
 
 .contact_content {
+  margin-top: 80px;
   display: flex;
-  gap: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  gap: 80px;
+  padding: 15px;
 
   .contact_link {
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -26,48 +26,83 @@
     transition: all 0.4s;
 
     i {
-      font-size: 1.7em;
-      color: rgb(187, 187, 187);
+      font-size: 2.8em;
+      color: #ffbe6c;
       transition: all 0.3s;
     }
 
+    h3 {
+      color: black;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+
     p {
-      color: rgb(187, 187, 187);
+      color: rgb(97, 97, 97);
+      font-weight: 300;
+      line-height: 1.3em;
+      text-align: center;
+      font-size: 0.95em;
       transition: all 0.3s;
     }
 
     .contact_line {
       height: 100%;
-      border: 1px solid rgb(187, 187, 187);
+      border: 1px solid rgb(142 140 140);
       transition: all 0.3s;
     }
 
     &:hover {
-      i {
-        color: white;
-      }
-
       p {
-        color: white;
+        color: rgb(0, 0, 0);
       }
 
-      .contact_line {
-        transform: scaleY(1.2);
-        border: 1px solid white;
+      i {
+        animation: rotateLeftRight 0.3s alternate;
+      }
+
+      @keyframes rotateLeftRight {
+        0% {
+          transform: scale(1.1) rotate(0deg); /* Applique le scale et le position initial de rotation */
+        }
+        10% {
+          transform: scale(1.1) rotate(-10deg); /* Scale conservé avec rotation vers la gauche */
+        }
+        50% {
+          transform: scale(1.1) rotate(10deg); /* Scale conservé avec rotation vers la droite */
+        }
+        100% {
+          transform: scale(1.1) rotate(-10deg); /* Retour à la rotation initiale vers la gauche */
+        }
       }
     }
   }
 }
 
+@media screen and (max-width: 800px) {
+  .contact_content {
+    gap: 30px;
+  }
+}
+
 @media screen and (max-width: 530px) {
+  .contact {
+    margin-bottom: 30px;
+  }
   .contact_content {
     gap: 10px;
+    flex-direction: column;
+    margin-top: 20px;
 
     .contact_link {
       gap: 7px;
 
       i {
-        font-size: 1.3em;
+        font-size: 1.9em;
+      }
+      h3 {
+        font-size: 1.1em;
       }
 
       p {

@@ -1,7 +1,3 @@
-modifié les donnée des tags
-
-faire les Alt des banners
-
-changer l'image des metas
+hanger l'image des metas
 
 renommé les images pour ne plus être "test"

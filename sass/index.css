@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
 }
@@ -22,12 +23,12 @@ body .return-home-icon {
   border-radius: 50%;
   color: white;
   background-color: #d9dac8;
-  box-shadow: 0px 0px 2px rgb(0, 0, 0);
+  border: 1px solid rgb(179, 176, 176);
   transition: all 0.3s;
 }
 body .return-home-icon:hover {
+  background-color: #ffcc8b;
   color: white;
-  transform: scale(1.2);
 }
 
 section {
@@ -124,7 +125,7 @@ header .parallax_img {
 }
 
 .navbar_menu {
-  z-index: 3;
+  z-index: -3;
   display: flex;
   gap: 100px;
 }
@@ -253,7 +254,6 @@ header .parallax_img {
     z-index: 5;
   }
   .navbar .navbar_elements .navbar_menu {
-    display: none;
     flex-direction: column;
     position: absolute;
     top: 61px;
@@ -306,6 +306,7 @@ header .parallax_img {
   overflow: hidden;
 }
 .about .about_content {
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -428,8 +429,7 @@ header .parallax_img {
   padding: 30px;
   position: relative;
   justify-content: center;
-  background-image: url("/assets/images/test32.jpg");
-  background-color: #ffbe6c;
+  background-image: url("/assets/images/skills-background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -496,6 +496,8 @@ header .parallax_img {
 @media screen and (max-width: 756px) {
   .skills h2 {
     margin: 40px 0px 20px;
+    width: 90%;
+    text-align: center;
   }
   .skills .skills_content {
     width: 93%;
@@ -522,7 +524,7 @@ header .parallax_img {
     height: 85px;
   }
   .skills_images_flex .skills_images_wrapper p {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 }
 @media screen and (max-width: 400px) {
@@ -560,12 +562,12 @@ body .return-home-icon {
   border-radius: 50%;
   color: white;
   background-color: #d9dac8;
-  box-shadow: 0px 0px 2px rgb(0, 0, 0);
+  border: 1px solid rgb(179, 176, 176);
   transition: all 0.3s;
 }
 body .return-home-icon:hover {
+  background-color: #ffcc8b;
   color: white;
-  transform: scale(1.2);
 }
 
 section {
@@ -606,7 +608,6 @@ main {
 .projects h2 {
   margin: 80px 0px;
   padding: 0px 12px;
-  background-color: #ffbe6c;
 }
 
 .card-flex {
@@ -633,8 +634,8 @@ main {
 }
 .card-flex .card .card_content h3 {
   font-weight: 100;
-  margin: 18px 0px 20px;
-  font-size: 2.4rem;
+  margin: 20px 0px 20px;
+  font-size: 2.6rem;
   letter-spacing: 0.1em;
   font-family: "caveat", cursive;
 }
@@ -675,20 +676,20 @@ main {
   margin-bottom: 10px;
 }
 .card_buttons a {
-  box-shadow: 2px 2px 5px grey;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 3px #ffffff;
   text-decoration: none;
   cursor: pointer;
   font-family: "caveat", cursive;
   font-size: 1.1em;
   padding: 7px 15px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.69);
-  color: #000000;
+  background-color: #ffbe6c;
+  color: white;
   transition: all 0.2s;
 }
 .card_buttons a:hover {
-  background-color: white;
-  color: black;
+  transform: scale(1.05);
 }
 
 .card_tags {
@@ -703,10 +704,12 @@ main {
   border-radius: 20px;
 }
 .card_tags .card_tag {
+  box-shadow: inset 1px 1px 3px #ffffff;
+  border-radius: 5px;
   font-family: "caveat", cursive;
-  padding: 0px 10px;
-  background-color: rgba(255, 255, 255, 0.69);
-  color: #000000;
+  padding: 2px 10px;
+  background-color: #ffbe6c;
+  color: #ffffff;
   font-size: 1.2em;
   font-weight: bold;
   font-weight: 100;
@@ -735,10 +738,10 @@ main {
 }
 @media (max-width: 425px) {
   .card-flex .card .card_content h3 {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
   }
   .card-flex .card .card_content .card_tag {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .card-flex .card .card_content .card_cover-img img {
     height: 220px;
@@ -762,20 +765,21 @@ main {
   }
 }
 .contact {
-  background-color: #1d1d1d;
-  padding: 15px;
+  margin-bottom: 190px;
 }
 .contact h2 {
-  margin: 30px 0px 80px 0px;
+  margin: 30px 0px 15px 0px;
 }
 
 .contact_content {
+  margin-top: 80px;
   display: flex;
-  gap: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  gap: 80px;
+  padding: 15px;
 }
 .contact_content .contact_link {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -788,39 +792,72 @@ main {
   transition: all 0.4s;
 }
 .contact_content .contact_link i {
-  font-size: 1.7em;
-  color: rgb(187, 187, 187);
+  font-size: 2.8em;
+  color: #ffbe6c;
   transition: all 0.3s;
 }
+.contact_content .contact_link h3 {
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
 .contact_content .contact_link p {
-  color: rgb(187, 187, 187);
+  color: rgb(97, 97, 97);
+  font-weight: 300;
+  line-height: 1.3em;
+  text-align: center;
+  font-size: 0.95em;
   transition: all 0.3s;
 }
 .contact_content .contact_link .contact_line {
   height: 100%;
-  border: 1px solid rgb(187, 187, 187);
+  border: 1px solid rgb(142, 140, 140);
   transition: all 0.3s;
 }
-.contact_content .contact_link:hover i {
-  color: white;
-}
 .contact_content .contact_link:hover p {
-  color: white;
+  color: rgb(0, 0, 0);
 }
-.contact_content .contact_link:hover .contact_line {
-  transform: scaleY(1.2);
-  border: 1px solid white;
+.contact_content .contact_link:hover i {
+  animation: rotateLeftRight 0.3s alternate;
+}
+@keyframes rotateLeftRight {
+  0% {
+    transform: scale(1.1) rotate(0deg); /* Applique le scale et le position initial de rotation */
+  }
+  10% {
+    transform: scale(1.1) rotate(-10deg); /* Scale conservé avec rotation vers la gauche */
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg); /* Scale conservé avec rotation vers la droite */
+  }
+  100% {
+    transform: scale(1.1) rotate(-10deg); /* Retour à la rotation initiale vers la gauche */
+  }
 }
 
+@media screen and (max-width: 800px) {
+  .contact_content {
+    gap: 30px;
+  }
+}
 @media screen and (max-width: 530px) {
+  .contact {
+    margin-bottom: 30px;
+  }
   .contact_content {
     gap: 10px;
+    flex-direction: column;
+    margin-top: 20px;
   }
   .contact_content .contact_link {
     gap: 7px;
   }
   .contact_content .contact_link i {
-    font-size: 1.3em;
+    font-size: 1.9em;
+  }
+  .contact_content .contact_link h3 {
+    font-size: 1.1em;
   }
   .contact_content .contact_link p {
     font-size: 0.8em;
@@ -830,6 +867,20 @@ main {
   }
   .contact_content .contact_link:hover .contact_line {
     transform: scaleY(1.4);
+  }
+}
+footer {
+  background-color: #1d1d1d;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: center;
+  color: rgb(187, 187, 187);
+  font-weight: 100;
+}
+
+@media (max-width: 800px) {
+  footer {
+    font-size: 0.8em;
   }
 }
 

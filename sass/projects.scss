@@ -9,7 +9,6 @@
   h2 {
     margin: 80px 0px;
     padding: 0px 12px;
-    background-color: #ffbe6c;
   }
 }
 
@@ -37,8 +36,8 @@
 
       h3 {
         font-weight: 100;
-        margin: 18px 0px 20px;
-        font-size: 2.4rem;
+        margin: 20px 0px 20px;
+        font-size: 2.6rem;
         letter-spacing: 0.1em;
         font-family: "caveat", cursive;
       }
@@ -76,20 +75,20 @@
   margin-bottom: 10px;
 
   a {
-    box-shadow: 2px 2px 5px grey;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px #ffffff;
     text-decoration: none;
     cursor: pointer;
     font-family: "caveat", cursive;
     font-size: 1.1em;
     padding: 7px 15px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.69);
-    color: #000000;
+    background-color: #ffbe6c;
+    color: white;
     transition: all 0.2s;
 
     &:hover {
-      background-color: white;
-      color: black;
+      transform: scale(1.05);
     }
   }
 }
@@ -107,10 +106,12 @@
   }
 
   .card_tag {
+    box-shadow: inset 1px 1px 3px #ffffff;
+    border-radius: 5px;
     font-family: "caveat", cursive;
-    padding: 0px 10px;
-    background-color: rgba(255, 255, 255, 0.69);
-    color: #000000;
+    padding: 2px 10px;
+    background-color: #ffbe6c;
+    color: #ffffff;
     font-size: 1.2em;
     font-weight: bold;
     font-weight: 100;
@@ -146,11 +147,11 @@
     .card {
       .card_content {
         h3 {
-          font-size: 1.7rem;
+          font-size: 2.2rem;
         }
 
         .card_tag {
-          font-size: 0.8em;
+          font-size: 1em;
         }
 
         .card_cover-img {
