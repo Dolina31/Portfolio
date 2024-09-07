@@ -125,7 +125,6 @@ header .parallax_img {
 }
 
 .navbar_menu {
-  z-index: -3;
   display: flex;
   gap: 100px;
 }
