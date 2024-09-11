@@ -23,11 +23,10 @@
     border-radius: 3px;
     padding: 20px;
     background-color: #ebeee7;
-    box-shadow: 1px 2px 7px #b6b6b6;
+    box-shadow: 0px 0px 3px #b6b6b6;
     transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
     transform-style: preserve-3d;
     transition: all 0.3s;
-    cursor: pointer;
 
     .card_content {
       height: 100%;
@@ -76,7 +75,7 @@
 
   a {
     border-radius: 5px;
-    box-shadow: inset 1px 1px 3px #ffffff;
+    box-shadow: inset 1px 1px 1px #ffffffd7;
     text-decoration: none;
     cursor: pointer;
     font-family: "caveat", cursive;
@@ -97,23 +96,22 @@
   display: flex;
   gap: 15px;
   margin-top: 20px;
+  flex-wrap: wrap;
 
   .tag {
-    font-size: 0.9em;
     padding: 3px 10px;
     color: white;
     border-radius: 20px;
   }
 
   .card_tag {
-    box-shadow: inset 1px 1px 3px #ffffff;
+    box-shadow: inset 1px 1px 1px #ffffffd7;
     border-radius: 5px;
     font-family: "caveat", cursive;
     padding: 2px 10px;
     background-color: #ffbe6c;
     color: #ffffff;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.1em;
     font-weight: 100;
   }
 
@@ -136,7 +134,10 @@
 @media (max-width: 900px) {
   .card-flex {
     grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 50px;
     .card {
+      width: 85%;
       padding: 10px;
     }
   }
@@ -144,6 +145,7 @@
 
 @media (max-width: 425px) {
   .card-flex {
+    width: 100%;
     .card {
       .card_content {
         h3 {

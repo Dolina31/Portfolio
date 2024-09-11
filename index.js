@@ -38,11 +38,12 @@ window.addEventListener("load", () => {
 });
 
 let isNavbarVisible = false;
+
 navBarIcon.addEventListener("click", () => {
   if (isNavbarVisible) {
-    navBarMenu.style.visibility = "hidden";
+    navBarMenu.classList.remove("active");
   } else {
-    navBarMenu.style.visibility = "visible";
+    navBarMenu.classList.add("active");
   }
 
   isNavbarVisible = !isNavbarVisible;

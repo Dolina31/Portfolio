@@ -65,6 +65,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 header .parallax_img {
   z-index: -1;
@@ -241,6 +242,7 @@ header .parallax_img {
     height: 112%;
   }
   .navbar {
+    position: relative;
     padding: 20px 0px;
     z-index: 4;
   }
@@ -253,18 +255,23 @@ header .parallax_img {
     z-index: 5;
   }
   .navbar .navbar_elements .navbar_menu {
+    opacity: 0;
     flex-direction: column;
     position: absolute;
-    top: 61px;
+    top: 30px;
     align-items: center;
     background: rgba(255, 255, 255, 0.81);
-    padding: 25px 0px;
+    padding: 35px 0px;
     width: 100%;
-    gap: 15px;
-    transition: transform 0.5s;
+    gap: 25px;
+    transition: all 0.5s;
     font-weight: bold;
     backdrop-filter: blur(3px);
     z-index: 3;
+  }
+  .navbar .navbar_elements .navbar_menu.active {
+    top: 64px;
+    opacity: 1;
   }
   .navbar .navbar_elements .navbar_menu .navbar_menu_link {
     flex-direction: column;
@@ -288,7 +295,7 @@ header .parallax_img {
     font-size: 2em;
   }
   .navbar {
-    width: 87%;
+    width: 93%;
   }
 }
 .about_transition_img {
@@ -620,11 +627,10 @@ main {
   border-radius: 3px;
   padding: 20px;
   background-color: #ebeee7;
-  box-shadow: 1px 2px 7px #b6b6b6;
+  box-shadow: 0px 0px 3px #b6b6b6;
   transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
   transform-style: preserve-3d;
   transition: all 0.3s;
-  cursor: pointer;
 }
 .card-flex .card .card_content {
   height: 100%;
@@ -676,7 +682,7 @@ main {
 }
 .card_buttons a {
   border-radius: 5px;
-  box-shadow: inset 1px 1px 3px #ffffff;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.8431372549);
   text-decoration: none;
   cursor: pointer;
   font-family: "caveat", cursive;
@@ -695,22 +701,21 @@ main {
   display: flex;
   gap: 15px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 .card_tags .tag {
-  font-size: 0.9em;
   padding: 3px 10px;
   color: white;
   border-radius: 20px;
 }
 .card_tags .card_tag {
-  box-shadow: inset 1px 1px 3px #ffffff;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.8431372549);
   border-radius: 5px;
   font-family: "caveat", cursive;
   padding: 2px 10px;
   background-color: #ffbe6c;
   color: #ffffff;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.1em;
   font-weight: 100;
 }
 .card_tags .card_tag-icon {
@@ -730,12 +735,18 @@ main {
 @media (max-width: 900px) {
   .card-flex {
     grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 50px;
   }
   .card-flex .card {
+    width: 85%;
     padding: 10px;
   }
 }
 @media (max-width: 425px) {
+  .card-flex {
+    width: 100%;
+  }
   .card-flex .card .card_content h3 {
     font-size: 2.2rem;
   }

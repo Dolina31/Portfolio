@@ -1,3 +1,7 @@
-hanger l'image des metas
+changer l'image des metas
 
-renommé les images pour ne plus être "test"
+reparer la navbar qui saffiche sous le menu en version mobile
+
+regarder la section contact et essayer d'ameliorer le responsive
+
+voir si je change la police des textes des cards

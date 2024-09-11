@@ -3,12 +3,13 @@
         "id": "7",
         "title": "Anazir",
         "cover": "./assets/images/anazir-banner.jpeg",
-        "resume": "Création du site du jeux mobile Anazir. \nIntégration de web3.js pour la connexion à un wallet blockchain. Utilisation de Vite pour optimiser le projet.\n Réalisé from scratch en toute autonomie",
-        "description": "",
+        "resume": "Création du site du jeux mobile Anazir. Intégration de web3.js pour la connexion à un wallet blockchain. Utilisation de Vite pour optimiser le projet. Réalisé from scratch en toute autonomie",
         "tags": [
             "Html",
             "Css",
-            "Javascript"
+            "Javascript",
+            "Vite",
+            "Web3.js"
         ],
         "url": "https://anazirgame.com/",
         "codeUrl": "https://github.com/Dolina31/Anazir"
@@ -18,8 +19,7 @@
         "title": "Booki",
         "cover": "./assets/images/booki-banner.avif",
         "coverAlt": "Un lit avec des draps blancs et des oreillers jaunes dans une chambre d'hôtel",
-        "resume": "Ma mission sur ce projet consistait à concrétiser les concepts élaborés par l'UI designer en les intégrant avec HTML et CSS.\nL'objectif principal était de créer un site web réactif qui puisse s'adapter à toute les tailles d'écrans.",
-        "description": "",
+        "resume": "Ma mission sur ce projet consistait à concrétiser les concepts élaborés par l'UI designer en les intégrant avec HTML et CSS.L'objectif principal était de créer un site web réactif qui puisse s'adapter à toute les tailles d'écrans.",
         "tags": [
             "Html",
             "Css"
@@ -32,23 +32,21 @@
         "title": "Ohmyfood",
         "cover": "./assets/images/ohmyfood-banner.avif",
         "coverAlt": "Un plat de nourriture sur une table de restaurant",
-        "resume": "Ce projet a été pensé en mobile first pour garantir une expérience utilisateur optimale sur tous les appareils. \n Des animations ainsi qu'un loading ont été intégrées pour rendre le site plus interactif. Le code à été organisé et optimisé avec Sass.",
-        "description": "",
+        "resume": "Ce projet a été pensé en mobile first pour garantir une expérience utilisateur optimale sur tous les appareils.  Des animations ainsi qu'un loading ont été intégrées pour rendre le site plus interactif. Le code à été organisé et optimisé avec Sass.",
         "tags": [
             "Html",
             "Css",
             "Sass"
         ],
-        "url": "https://dolina31.github.io/P3-openclassroom/",
-        "codeUrl": "https://github.com/Dolina31/P3-openclassroom"
+        "url": "https://dolina31.github.io/P4-Openclassroom/",
+        "codeUrl": "https://github.com/Dolina31/P4-openclassroom"
     },
     {
         "id": "3",
         "title": "Sophie Bluel",
         "cover": "./assets/images/sophie-bluel-banner.avif",
         "coverAlt": "Portait d'une femme entourée de verdure",
-        "resume": "Conception du portfolio de l'architecte Sophie Bluel.\n Présentation des travaux avec des filtres par catégorie, création d'un login et d'une page d'administration permettant d'ajouter/supprimer des projets. ",
-        "description": "",
+        "resume": "Conception du portfolio de l'architecte Sophie Bluel. Présentation des travaux avec des filtres par catégorie, création d'un login et d'une page d'administration permettant d'ajouter/supprimer des projets. ",
         "tags": [
             "Html",
             "Css",
@@ -61,8 +59,7 @@
         "title": "Nina Carducci",
         "cover": "./assets/images/nina-carducci-banner.avif",
         "coverAlt": "Appareil photo, une lumière rouge reflète sur l'appareil",
-        "resume": "Projet visant à optimiser le portfolio de Nina Carducci, une photographe. \n Optimisation des images, mise en place du référencement local et ajout de méta pour les réseaux sociaux. Amélioration du SEO et de l'accessibilité avec Lighthouse et Wave. ",
-        "description": "",
+        "resume": "Projet visant à optimiser le portfolio de Nina Carducci, une photographe.  Optimisation des images, mise en place du référencement local et ajout de méta pour les réseaux sociaux. Amélioration du SEO et de l'accessibilité avec Lighthouse et Wave. ",
         "tags": [
             "Seo"
         ],
@@ -74,8 +71,7 @@
         "title": "Kasa",
         "cover": "./assets/images/kasa-banner.avif",
         "coverAlt": "Salon moderne et confortable",
-        "resume": "Refonte d'un site de location d'appartements avec React. \n Création des composants et routes nécessaires, intégration dynamique des hôtes, descriptions et évaluations de chaque logement. ",
-        "description": "",
+        "resume": "Refonte d'un site de location d'appartements avec React.  Création des composants et routes nécessaires, intégration dynamique des hôtes, descriptions et évaluations de chaque logement. ",
         "tags": [
             "React",
             "Sass"
@@ -87,8 +83,7 @@
         "title": "ArgentBank",
         "cover": "./assets/images/argentbank-banner.avif",
         "coverAlt": "Jeune plante poussant dans un verre rempli de pièces de monnaies",
-        "resume": "Gestion des connexions utilisateurs, affichage de leurs comptes, ajout de la possibilité de modifier leur pseudo. \n Création de nouvelles routes API pour la future gestion des transactions.",
-        "description": "",
+        "resume": "Gestion des connexions utilisateurs, affichage de leurs comptes, ajout de la possibilité de modifier leur pseudo.  Création de nouvelles routes API pour la future gestion des transactions.",
         "tags": [
             "React",
             "Redux",
