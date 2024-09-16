@@ -8,8 +8,8 @@
 .contact_content {
   margin-top: 80px;
   display: flex;
-  gap: 80px;
-  padding: 15px;
+  gap: 150px;
+  padding: 25px;
 
   .contact_link {
     display: flex;
@@ -83,6 +83,7 @@
 @media screen and (max-width: 800px) {
   .contact_content {
     gap: 30px;
+    flex-direction: column;
   }
 }
 
@@ -90,9 +91,10 @@
   .contact {
     margin-bottom: 30px;
   }
+
   .contact_content {
     gap: 10px;
-    flex-direction: column;
+
     margin-top: 20px;
 
     .contact_link {

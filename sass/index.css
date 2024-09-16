@@ -98,6 +98,7 @@ header .parallax_img {
   transition: all 0.5s;
   margin-top: 20px;
   border-radius: 10px;
+  z-index: 10;
 }
 .navbar .navbar_elements {
   width: 96%;
@@ -108,11 +109,7 @@ header .parallax_img {
 .navbar .navbar_elements .navbar-icon {
   cursor: pointer;
   display: none;
-  height: 35px;
   transition: all 0.2s;
-}
-.navbar .navbar_elements .navbar-icon:hover {
-  transform: scaleX(1.3);
 }
 .navbar .logo {
   font-family: "Caveat", cursive;
@@ -120,6 +117,7 @@ header .parallax_img {
   margin-left: 30px;
   margin-bottom: 5px;
   transition: all 0.3s;
+  cursor: default;
 }
 .navbar .logo:hover {
   letter-spacing: 0.1em;
@@ -238,56 +236,118 @@ header .parallax_img {
   }
 }
 @media screen and (max-width: 790px) {
+  .menu-icon {
+    transform: scale(1.1);
+  }
+  :root {
+    --bar-bg: #000000;
+  }
+  .menu-icon {
+    margin: 10px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  .menu-icon .menu-icon_checkbox {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    position: absolute;
+    opacity: 0;
+  }
+  .menu-icon div {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 22px;
+    height: 12px;
+  }
+  .menu-icon span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bar-bg, #000);
+    border-radius: 1px;
+    transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  }
+  .menu-icon span:first-of-type {
+    top: 0;
+    width: 80%;
+  }
+  .menu-icon span:last-of-type {
+    bottom: 0;
+  }
+  .menu-icon.active span:first-of-type,
+  .menu-icon .menu-icon_checkbox:checked + div span:first-of-type {
+    transform: rotate(45deg);
+    width: 100%;
+    top: 5px;
+  }
+  .menu-icon.active span:last-of-type,
+  .menu-icon .menu-icon_checkbox:checked + div span:last-of-type {
+    transform: rotate(-45deg);
+    bottom: 5px;
+    width: 100%;
+  }
   header .parallax_img {
     height: 112%;
   }
   .navbar {
     position: relative;
-    padding: 20px 0px;
-    z-index: 4;
+    padding: 20px 0;
+    z-index: 3;
   }
   .navbar .navbar_elements {
     align-items: center;
   }
   .navbar .navbar_elements .navbar-icon {
     display: flex;
-    margin-right: 15px;
     z-index: 5;
   }
-  .navbar .navbar_elements .navbar_menu {
+  .navbar .logo {
+    margin-left: 15px;
+    font-size: 1.7em;
+  }
+  .navbar_menu {
     opacity: 0;
     flex-direction: column;
     position: absolute;
     top: 30px;
     align-items: center;
     background: rgba(255, 255, 255, 0.81);
-    padding: 35px 0px;
+    padding: 55px 0;
     width: 100%;
-    gap: 25px;
+    gap: 45px !important;
     transition: all 0.5s;
     font-weight: bold;
     backdrop-filter: blur(3px);
-    z-index: 3;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   }
-  .navbar .navbar_elements .navbar_menu.active {
-    top: 64px;
+  .navbar_menu.active {
     opacity: 1;
+    top: 100px;
   }
-  .navbar .navbar_elements .navbar_menu .navbar_menu_link {
+  .navbar_menu .navbar_menu_link {
     flex-direction: column;
     transition: all 0.3s;
+    font-size: 1.1em;
   }
-  .navbar .navbar_elements .navbar_menu .navbar_menu_link:hover .navbar_menu_link_line {
+  .navbar_menu .navbar_menu_link:hover .navbar_menu_link_line {
     transform: scaleX(1.5);
   }
-  .navbar .navbar_elements .navbar_menu .navbar_menu_link .navbar_menu_link_line {
+  .navbar_menu .navbar_menu_link .navbar_menu_link_line {
     width: 60px;
     display: none;
     height: 2px;
-  }
-  .navbar .logo {
-    margin-left: 15px;
-    font-size: 1.7em;
   }
 }
 @media screen and (max-width: 600px) {
@@ -333,9 +393,9 @@ header .parallax_img {
   transform: translateX(-3em);
   transition: all 0.7s ease-in-out;
   position: absolute;
-  left: 30px;
+  left: 10px;
   z-index: -2;
-  height: 100%;
+  height: 87%;
   animation: project-bounce 5s ease infinite;
 }
 @keyframes project-bounce {
@@ -435,7 +495,7 @@ header .parallax_img {
   padding: 30px;
   position: relative;
   justify-content: center;
-  background-image: url("/assets/images/skills-background.jpg");
+  background-image: url("/assets/images/skills-background.avif");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -651,10 +711,9 @@ main {
   object-fit: cover;
 }
 .card-flex .card .card_content p {
-  color: rgb(48, 48, 48);
+  color: rgba(117, 116, 116, 0.795);
   font-size: 1em;
-  line-height: 1.7em;
-  font-weight: 100;
+  line-height: 1.8em;
   margin-bottom: 30px;
 }
 .card-flex .card:hover {
@@ -784,8 +843,8 @@ main {
 .contact_content {
   margin-top: 80px;
   display: flex;
-  gap: 80px;
-  padding: 15px;
+  gap: 150px;
+  padding: 25px;
 }
 .contact_content .contact_link {
   display: flex;
@@ -849,6 +908,7 @@ main {
 @media screen and (max-width: 800px) {
   .contact_content {
     gap: 30px;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 530px) {
@@ -857,7 +917,6 @@ main {
   }
   .contact_content {
     gap: 10px;
-    flex-direction: column;
     margin-top: 20px;
   }
   .contact_content .contact_link {

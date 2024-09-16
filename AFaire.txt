@@ -1,7 +1,0 @@
-changer l'image des metas
-
-reparer la navbar qui saffiche sous le menu en version mobile
-
-regarder la section contact et essayer d'ameliorer le responsive
-
-voir si je change la police des textes des cards

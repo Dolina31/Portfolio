@@ -2,8 +2,8 @@
     {
         "id": "7",
         "title": "Anazir",
-        "cover": "./assets/images/anazir-banner.jpeg",
-        "resume": "Création du site du jeux mobile Anazir. Intégration de web3.js pour la connexion à un wallet blockchain. Utilisation de Vite pour optimiser le projet. Réalisé from scratch en toute autonomie",
+        "cover": "./assets/images/anazir-banner.avif",
+        "resume": "Création du site du jeux mobile Anazir. Intégration de web3.js pour la connexion à un wallet blockchain, récupèration des differents soldes de l'utilisateur, changement de réseaux. Utilisation de Vite pour optimiser le projet. Réalisé from scratch en autonomie",
         "tags": [
             "Html",
             "Css",
@@ -46,7 +46,7 @@
         "title": "Sophie Bluel",
         "cover": "./assets/images/sophie-bluel-banner.avif",
         "coverAlt": "Portait d'une femme entourée de verdure",
-        "resume": "Conception du portfolio de l'architecte Sophie Bluel. Présentation des travaux avec des filtres par catégorie, création d'un login et d'une page d'administration permettant d'ajouter/supprimer des projets. ",
+        "resume": "Conception du portfolio de l'architecte Sophie Bluel. Affichage des travaux de manière dynamique. Possibilité de filtrer les projets par catégories , création d'un login et d'une page d'administration permettant d'ajouter/supprimer des projets. ",
         "tags": [
             "Html",
             "Css",
@@ -71,7 +71,7 @@
         "title": "Kasa",
         "cover": "./assets/images/kasa-banner.avif",
         "coverAlt": "Salon moderne et confortable",
-        "resume": "Refonte d'un site de location d'appartements avec React.  Création des composants et routes nécessaires, intégration dynamique des hôtes, descriptions et évaluations de chaque logement. ",
+        "resume": "Refonte d'un site de location d'appartements avec React. Intégration dynamique des données, incluant la gestion des profils d’hôtes, les descriptions détaillées des logements et les évaluations des utilisateurs",
         "tags": [
             "React",
             "Sass"
@@ -89,6 +89,6 @@
             "Redux",
             "Swagger"
         ],
-        "codeUrl": "https://github.com/Dolina31/P8-openclassroom"
+        "codeUrl": "https://github.com/Dolina31/P11-openclassroom"
     }
 ]
