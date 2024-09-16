@@ -193,8 +193,10 @@ header .parallax_img {
   margin-bottom: 15px;
   transition: all 0.4s ease-in-out;
   opacity: 1;
+  text-decoration: none;
 }
 .scroll p {
+  z-index: 10;
   font-weight: 100;
   font-size: 1.1em;
   color: white;
@@ -236,72 +238,35 @@ header .parallax_img {
   }
 }
 @media screen and (max-width: 790px) {
-  .menu-icon {
-    transform: scale(1.1);
-  }
-  :root {
-    --bar-bg: #000000;
-  }
-  .menu-icon {
-    margin: 10px;
-    position: relative;
-    width: 20px;
-    height: 20px;
-  }
-  .menu-icon .menu-icon_checkbox {
+  .navbar-icon_lines span {
+    border-radius: 10px;
     display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    cursor: pointer;
-    z-index: 2;
-    -webkit-touch-callout: none;
-    position: absolute;
+    height: 2px;
+    background-color: black;
+    width: 25px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .navbar-icon_lines.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 5px);
+  }
+  .navbar-icon_lines.active span:nth-child(2) {
     opacity: 0;
   }
-  .menu-icon div {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 22px;
-    height: 12px;
+  .navbar-icon_lines.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -5px);
   }
-  .menu-icon span {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--bar-bg, #000);
-    border-radius: 1px;
-    transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  .content {
+    transition: opacity 0.3s ease;
   }
-  .menu-icon span:first-of-type {
-    top: 0;
-    width: 80%;
-  }
-  .menu-icon span:last-of-type {
-    bottom: 0;
-  }
-  .menu-icon.active span:first-of-type,
-  .menu-icon .menu-icon_checkbox:checked + div span:first-of-type {
-    transform: rotate(45deg);
-    width: 100%;
-    top: 5px;
-  }
-  .menu-icon.active span:last-of-type,
-  .menu-icon .menu-icon_checkbox:checked + div span:last-of-type {
-    transform: rotate(-45deg);
-    bottom: 5px;
-    width: 100%;
+  .navbar-icon_lines.active ~ .content {
+    opacity: 0.3;
   }
   header .parallax_img {
     height: 112%;
   }
   .navbar {
-    position: relative;
     padding: 20px 0;
     z-index: 3;
   }
@@ -328,13 +293,13 @@ header .parallax_img {
     gap: 45px !important;
     transition: all 0.5s;
     font-weight: bold;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   }
   .navbar_menu.active {
     opacity: 1;
-    top: 100px;
+    top: 85px;
   }
   .navbar_menu .navbar_menu_link {
     flex-direction: column;
@@ -432,7 +397,6 @@ header .parallax_img {
 .about .about_text p a {
   color: black;
   font-weight: 700;
-  text-decoration: none;
 }
 .about .about_text p i {
   font-size: 0.8em;

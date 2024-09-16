@@ -3,7 +3,8 @@ const parallaxImage = document.querySelector(".parallax_img");
 const parallaxSkillsImage = document.querySelector(".parallax-skills_img");
 const returnHomeIcon = document.querySelector(".return-home-icon");
 const navBar = document.querySelector(".navbar");
-const navBarIcon = document.querySelector(".menu-icon");
+const navBarIcon = document.querySelector(".navbar-icon");
+const navBarIconLines = document.querySelector(".navbar-icon_lines");
 const navBarMenu = document.querySelector(".navbar_menu");
 const navBarMenuLink = document.querySelectorAll(".navbar_menu_link");
 const title = document.querySelector(".title_position h1");
@@ -39,14 +40,28 @@ window.addEventListener("load", () => {
 
 let isNavbarVisible = false;
 
-navBarIcon.addEventListener("click", () => {
+function toggleNavbar() {
   if (isNavbarVisible) {
     navBarMenu.classList.remove("active");
   } else {
     navBarMenu.classList.add("active");
   }
-
   isNavbarVisible = !isNavbarVisible;
+}
+
+navBarIcon.addEventListener("click", toggleNavbar);
+
+document.addEventListener("click", (event) => {
+  if (
+    !navBarMenu.contains(event.target) &&
+    !navBarIcon.contains(event.target) &&
+    isNavbarVisible
+  ) {
+    toggleNavbar();
+  }
+});
+navBarIconLines.addEventListener("click", () => {
+  navBarIconLines.classList.toggle("active");
 });
 
 window.addEventListener("scroll", () => {
@@ -58,7 +73,7 @@ window.addEventListener("scroll", () => {
 const options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.35,
+  threshold: 0.25,
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -118,8 +133,6 @@ fetch("/projects.json")
 
     let cardsHTML = "";
     data.forEach((project) => {
-      const formattedResume = project.resume.replace(/\n/g, "<br>");
-
       // Générer les tags avec les icônes
       const formattedTags = project.tags
         .map((tag) => `<div class="card_tag">${tag}</div>`)
