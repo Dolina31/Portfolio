@@ -151,7 +151,7 @@ fetch("/projects.json")
             </div> 
             <div class="card_tags">${formattedTags}</div>
             <h3>${project.title}</h3>
-            <p>${formattedResume}</p>
+            <p>${project.resume}</p>
             <div class="card_buttons">
               ${viewSiteButton}
               <a href="${project.codeUrl}" target="_blank">voir le code</a>

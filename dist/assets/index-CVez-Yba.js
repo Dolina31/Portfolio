@@ -6,7 +6,7 @@
             </div> 
             <div class="card_tags">${t}</div>
             <h3>${r.title}</h3>
-            <p>${formattedResume}</p>
+            <p>${r.resume}</p>
             <div class="card_buttons">
               ${o}
               <a href="${r.codeUrl}" target="_blank">voir le code</a>
